@@ -9,5 +9,8 @@ namespace Hackaton.Domain.Entities
     public class Categoria : Entidad
     {
         public string Nombre { get; set; }
+
+        public virtual List<SucesoCategoria> SucesoCategorias { get; set; }
+
     }
 }

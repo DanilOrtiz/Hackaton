@@ -1,4 +1,5 @@
 ﻿using Hackaton.Domain.Core;
+using Hackaton.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,7 @@ namespace Hackaton.Domain.Entities
         public string Nombre { get; set; }
         public long Latitud { get; set; }
         public long Longitud { get; set; }
+
+        public virtual List<Suceso> Sucesos { get; set; }
     }
 }
