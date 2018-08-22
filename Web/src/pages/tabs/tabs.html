@@ -1,0 +1,17 @@
+<ion-tabs class="tabsBotones tab-shadow">
+  <ion-tab [root]="tab1Root" swipeBackEnabled="true" tabIcon="home"></ion-tab>
+  <ion-tab [root]="tab2Root" tabIcon="search"></ion-tab>
+  <ion-tab [root]="tab3Root" (click)="openCamera()"></ion-tab>
+  <ion-fab bottom center color="white">
+    <button ion-fab center bottom color="white" class="boton-medio-circulo" padding>
+      <div class="contenedor primary">
+        <ion-icon name="add" class="icon-medio-circulo" color="white"></ion-icon>
+      </div>
+  
+    </button>
+
+
+  </ion-fab>
+  <ion-tab [root]="tab4Root" tabIcon="heart"></ion-tab>
+  <ion-tab [root]="tab5Root" tabIcon="person"></ion-tab>
+</ion-tabs>
