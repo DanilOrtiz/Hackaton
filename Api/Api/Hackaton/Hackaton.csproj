@@ -43,6 +43,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AutoMapper, Version=6.1.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\AutoMapper.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>Libs\EntityFramework.dll</HintPath>
@@ -84,6 +88,18 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Practices.Unity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.Configuration, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.Unity.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity.RegistrationByConvention, Version=4.0.0.0, Culture=neutral, PublicKeyToken=6d32ff45e0ccc69f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Libs\Microsoft.Practices.Unity.RegistrationByConvention.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -118,13 +134,25 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Libs\AutoMapper.dll" />
+    <Content Include="Libs\AutoMapper.xml" />
     <Content Include="Libs\EntityFramework.dll" />
     <Content Include="Libs\EntityFramework.SqlServer.dll" />
     <Content Include="Libs\EntityFramework.SqlServer.xml" />
     <Content Include="Libs\EntityFramework.xml" />
+    <Content Include="Libs\Microsoft.Practices.Unity.Configuration.dll" />
+    <Content Include="Libs\Microsoft.Practices.Unity.Configuration.xml" />
+    <Content Include="Libs\Microsoft.Practices.Unity.dll" />
+    <Content Include="Libs\Microsoft.Practices.Unity.RegistrationByConvention.dll" />
+    <Content Include="Libs\Microsoft.Practices.Unity.RegistrationByConvention.xml" />
+    <Content Include="Libs\Microsoft.Practices.Unity.xml" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\Core\BaseDto.cs" />
+    <Compile Include="Application\Core\RespuestaTipo.cs" />
+    <Compile Include="Application\IoC\Contenedor.cs" />
+    <Compile Include="Application\IoC\MapeoObjetos.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Domain\Core\Repositorios\IRepositorio.cs" />
     <Compile Include="Domain\Core\Repositorios\IUnitOfWork.cs" />
@@ -147,6 +175,7 @@
     <Compile Include="Infraestructure\Core\BaseUnitOfWork.cs" />
     <Compile Include="Infraestructure\Core\IEntityUnitOfWork.cs" />
     <Compile Include="Infraestructure\Core\Repositorio.cs" />
+    <Compile Include="Infraestructure\HackatonUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

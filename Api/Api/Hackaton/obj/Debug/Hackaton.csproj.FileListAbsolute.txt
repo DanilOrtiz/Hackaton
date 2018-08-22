@@ -42,3 +42,6 @@ C:\Users\rober\Desktop\Hackaton\Hackaton\Hackaton\bin\es\System.Web.Http.WebHost
 C:\Users\rober\Desktop\Hackaton\Hackaton\Hackaton\obj\Debug\Hackaton.csprojResolveAssemblyReference.cache
 C:\Users\rober\Desktop\Hackaton\Hackaton\Hackaton\obj\Debug\Hackaton.dll
 C:\Users\rober\Desktop\Hackaton\Hackaton\Hackaton\obj\Debug\Hackaton.pdb
+H:\Hackaton\Api\Api\Hackaton\obj\Debug\Hackaton.csprojResolveAssemblyReference.cache
+H:\Hackaton\Api\Api\Hackaton\obj\Debug\Hackaton.dll
+H:\Hackaton\Api\Api\Hackaton\obj\Debug\Hackaton.pdb
