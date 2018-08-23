@@ -9,7 +9,7 @@ namespace Hackaton.Infraestructure.Maps
 {
     public class CiudadMap : EntidadMap<Ciudad>
     {
-        public CiudadMap(string tablaNombre) : base(tablaNombre)
+        public CiudadMap() : base("Ciudad")
         {
             Property(x => x.Latitud).HasColumnType("numeric(18,6)").IsRequired();
             Property(x => x.Longitud).HasColumnType("numeric(18,6)").IsRequired();

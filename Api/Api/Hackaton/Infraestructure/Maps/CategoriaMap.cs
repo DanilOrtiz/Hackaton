@@ -9,7 +9,7 @@ namespace Hackaton.Infraestructure.Maps
 {
     public class CategoriaMap : EntidadMap<Categoria>
     {
-        public CategoriaMap(string tablaNombre) : base(tablaNombre)
+        public CategoriaMap() : base("Categoria")
         {
             Property(x => x.Nombre).HasColumnType("varchar").HasMaxLength(500).IsRequired();
         }

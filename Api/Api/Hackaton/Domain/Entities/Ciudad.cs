@@ -14,5 +14,7 @@ namespace Hackaton.Domain.Entities
         public long Longitud { get; set; }
 
         public virtual List<Suceso> Sucesos { get; set; }
+        public virtual List<Usuario> Usuarios{ get; set; }
+
     }
 }

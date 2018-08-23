@@ -15,5 +15,7 @@ namespace Hackaton.Domain.Entities
         public virtual Suceso Suceso { get; set; }
         public virtual SucesoMultimediaTipo SucesoMultimediaTipo { get; set; }
 
+
+
     }
 }

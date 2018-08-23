@@ -14,7 +14,13 @@ namespace Hackaton.Domain.Entities
         public int CiudadId { get; set; }
         public int PerfilId { get; set; }
         public string ImagenUrl { get; set; }
-        public virtual List<Suceso> Sucesos{ get; set; }
+        public string Correo { get; set; }
+        public virtual Ciudad Ciudad { get; set; }
+        public virtual Perfil Perfil { get; set; }
+
+        public virtual List<Suceso> Sucesos { get; set; }
+        public virtual List<SucesoComentario> SucesosComentarios { get; set; }
+        public virtual List<SucesoValoracion> SucesosValoraciones { get; set; }
 
         public bool EsValido(ref string mensaje)
         {

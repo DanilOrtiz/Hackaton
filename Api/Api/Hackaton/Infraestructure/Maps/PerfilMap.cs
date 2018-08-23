@@ -9,7 +9,7 @@ namespace Hackaton.Infraestructure.Maps
 {
     public class PerfilMap : EntidadMap<Perfil>
     {
-        public PerfilMap(string tablaNombre) : base(tablaNombre)
+        public PerfilMap() : base("Perfil")
         {
             Property(x => x.Nombre).HasColumnType("varchar").HasMaxLength(500).IsRequired();
         }

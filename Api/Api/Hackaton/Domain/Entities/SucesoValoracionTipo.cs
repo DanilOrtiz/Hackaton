@@ -10,5 +10,7 @@ namespace Hackaton.Domain.Entities
     {
         public string Nombre { get; set; }
         public int Valoracion { get; set; }
+
+        public virtual List<SucesoValoracion> SucesosValoracion { get; set; }
     }
 }

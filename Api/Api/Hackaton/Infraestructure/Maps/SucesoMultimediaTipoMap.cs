@@ -7,11 +7,11 @@ using System.Web;
 
 namespace Hackaton.Infraestructure.Maps
 {
-    public class EstadoMap : EntidadMap<Estado>
+    public class SucesoMultimediaTipoMap : EntidadMap<SucesoMultimediaTipo>
     {
-        public EstadoMap() : base("Estado")
+        public SucesoMultimediaTipoMap() : base("Suceso_Multimedia_Tipos")
         {
-            Property(x => x.Descripcion).HasColumnType("varchar").HasMaxLength(500).IsRequired();
+            Property(x => x.Nombre).HasColumnName("varchar").HasMaxLength(500);
         }
     }
 }
