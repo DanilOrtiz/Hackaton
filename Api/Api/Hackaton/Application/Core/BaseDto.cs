@@ -32,6 +32,9 @@ namespace Hackaton.Application.Core
 
         public RespuestaTipo RespuestaTipo { get; set; }
         public string Respuesta { get; set; }
+        public int Id { get; set; }
+        public DateTime FechaCrea { get; set; }
+        public bool Activo { get; set; }
 
     }
 }

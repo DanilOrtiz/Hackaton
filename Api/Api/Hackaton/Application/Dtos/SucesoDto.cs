@@ -1,0 +1,23 @@
+﻿using Hackaton.Application.Core;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Hackaton.Application.Dtos
+{
+    public class SucesoDto : BaseDto<SucesoDto>
+    {
+        public int UsuarioId { get; set; }
+        public string Descripcion { get; set; }
+        public long Latitud { get; set; }
+        public long Longitud { get; set; }
+        public bool EsAnonimo { get; set; }
+        public int CiudadId { get; set; }
+        public int EstadoId { get; set; }
+        public virtual UsuarioDto Usuario { get; set; }
+        public virtual CiudadDto Ciudad { get; set; }
+        public virtual List<SucesoCategoriaDto> SucesoCategorias { get; set; }
+        public virtual EstadoDto Estado { get; set; }
+    }
+}
