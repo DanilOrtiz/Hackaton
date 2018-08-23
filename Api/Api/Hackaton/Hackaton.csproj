@@ -157,6 +157,7 @@
     <Compile Include="Application\Dtos\UsuarioDto.cs" />
     <Compile Include="Application\IoC\Contenedor.cs" />
     <Compile Include="Application\IoC\MapeoObjetos.cs" />
+    <Compile Include="Application\Mapeos\MapeosDto.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Domain\Core\Repositorios\IRepositorio.cs" />
     <Compile Include="Domain\Core\Repositorios\IUnitOfWork.cs" />

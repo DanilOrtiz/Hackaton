@@ -9,7 +9,8 @@ namespace Hackaton.Domain.Entities
     public class Usuario : Entidad
     {
         public string Nombre { get; set; }
-        public byte[] Clave { get; set; }
+        public byte[] ClaveEncriptada { get; set; }
+        public string Clave { get; set; }
         public int CiudadId { get; set; }
         public int PerfilId { get; set; }
         public string ImagenUrl { get; set; }
