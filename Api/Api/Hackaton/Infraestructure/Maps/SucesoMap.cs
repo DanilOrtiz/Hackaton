@@ -14,7 +14,8 @@ namespace Hackaton.Infraestructure.Maps
             Property(x => x.CiudadId).HasColumnName("Ciudad_Id").IsOptional();
             Property(x => x.Descripcion).HasColumnType("varchar").HasMaxLength(1000);
             Property(x => x.UsuarioId).HasColumnName("Usuario_Id").IsOptional();
-            Property(x => x.Latitud).HasColumnType("numeric(18,6)").IsOptional();
+            Property(x => x.Latitud).HasColumnType("varchar").HasMaxLength(500).IsOptional();
+            Property(x => x.Longitud).HasColumnType("varchar").HasMaxLength(500).IsOptional();
             Property(x => x.EstadoId).HasColumnName("Estado_Id");
             Property(x => x.EsAnonimo).HasColumnType("bit");
 

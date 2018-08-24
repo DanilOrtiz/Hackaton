@@ -9,7 +9,7 @@ namespace Hackaton.Application.Dtos
     public class CiudadDto : BaseDto<CiudadDto>
     {
         public string Nombre { get; set; }
-        public long Latitud { get; set; }
-        public long Longitud { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
     }
 }

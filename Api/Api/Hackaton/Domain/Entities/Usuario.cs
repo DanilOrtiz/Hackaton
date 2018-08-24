@@ -15,7 +15,7 @@ namespace Hackaton.Domain.Entities
         public int PerfilId { get; set; }
         public string ImagenUrl { get; set; }
         public string Correo { get; set; }
-        public virtual Ciudad Ciudad { get; set; }
+       // public virtual Ciudad Ciudad { get; set; }
         public virtual Perfil Perfil { get; set; }
 
         public virtual List<Suceso> Sucesos { get; set; }

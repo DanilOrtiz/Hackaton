@@ -13,6 +13,11 @@
         {
         }
 
+        public void BeginTransaction()
+        {
+            throw new NotImplementedException();
+        }
+
         public virtual void Commit()
         {
             var transaccion = Database.BeginTransaction();
@@ -34,6 +39,11 @@
         public DbSet<TEntidad> ObtenerDbSet<TEntidad>() where TEntidad : class
         {
             return Set<TEntidad>();
+        }
+
+        public IRepositorio<TEntidad> Repositorio<TEntidad>() where TEntidad : class
+        {
+            return Repositorio<TEntidad>();
         }
 
         public void RollBack()

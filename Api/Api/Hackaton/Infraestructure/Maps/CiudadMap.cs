@@ -11,8 +11,8 @@ namespace Hackaton.Infraestructure.Maps
     {
         public CiudadMap() : base("Ciudad")
         {
-            Property(x => x.Latitud).HasColumnType("numeric(18,6)").IsRequired();
-            Property(x => x.Longitud).HasColumnType("numeric(18,6)").IsRequired();
+            Property(x => x.Latitud).HasColumnType("varchar").HasMaxLength(500);
+            Property(x => x.Longitud).HasColumnType("varchar").HasMaxLength(500);
             Property(x => x.Nombre).HasColumnType("varchar").HasMaxLength(500).IsRequired();
 
         }

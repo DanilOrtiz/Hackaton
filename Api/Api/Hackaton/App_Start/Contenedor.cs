@@ -1,4 +1,5 @@
-﻿using Hackaton.Domain.Core.Repositorios;
+﻿using Hackaton.Application.Services;
+using Hackaton.Domain.Core.Repositorios;
 using Hackaton.Infraestructure;
 using Hackaton.Infraestructure.Core;
 using Ninject;
@@ -29,7 +30,7 @@ namespace Hackaton.App_Start
             kernel.Bind<IUnitOfWork, IEntityUnitOfWork>().To<HackatonUnitOfWork>()
                 .WithConstructorArgument("repositorioType", x => { return typeof(Repositorio<>); });
 
-            //kernel.Bind<IReporteParaleloCategoriaAppService>().To<ReporteParaleloCategoriaAppService>();
+            kernel.Bind<IHackatonService>().To<HackatonService>();
             //kernel.Bind<IReporteParaleloProcedimientoAppService>().To<ReporteParaleloProcedimientoAppService>();
             //kernel.Bind<ISQLServerManagementAppService>().To<SQLServerManagementAppService>();
             Kernel = kernel;

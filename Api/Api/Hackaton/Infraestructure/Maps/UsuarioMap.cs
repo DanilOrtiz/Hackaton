@@ -20,7 +20,7 @@ namespace Hackaton.Infraestructure.Maps
             
             Property(x => x.ImagenUrl).HasColumnName("Imagen").HasColumnType("varchar").HasMaxLength(500);
 
-            HasRequired(x => x.Ciudad).WithMany(x => x.Usuarios).HasForeignKey(x => x.CiudadId);
+            //HasRequired(x => x.Ciudad).WithMany(x => x.Usuarios).HasForeignKey(x => x.CiudadId);
             HasRequired(x => x.Perfil).WithMany(x => x.Usuarios).HasForeignKey(x => x.PerfilId);
 
         }

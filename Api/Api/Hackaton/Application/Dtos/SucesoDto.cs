@@ -10,8 +10,8 @@ namespace Hackaton.Application.Dtos
     {
         public int UsuarioId { get; set; }
         public string Descripcion { get; set; }
-        public long Latitud { get; set; }
-        public long Longitud { get; set; }
+        public string Latitud { get; set; }
+        public string Longitud { get; set; }
         public bool EsAnonimo { get; set; }
         public int CiudadId { get; set; }
         public int EstadoId { get; set; }
