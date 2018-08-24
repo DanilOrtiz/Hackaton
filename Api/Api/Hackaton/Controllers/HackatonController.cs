@@ -12,7 +12,7 @@ namespace Hackaton.Controllers
     [RoutePrefix("api")]
     public class HackatonController : ApiController
     {
-        private IHackatonService _hackatonService = Contenedor.Get<IHackatonService>();
+        private IHackatonService _hackatonService = Contenedor.Resolve<IHackatonService>();
 
 
         [HttpGet]
