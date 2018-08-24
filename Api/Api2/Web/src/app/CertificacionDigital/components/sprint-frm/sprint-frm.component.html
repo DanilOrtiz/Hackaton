@@ -1,0 +1,136 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card">
+          <div class="card-header card-header-icon" data-background-color="red">
+            <i class="material-icons">class</i>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">Sprint</h4>
+
+              
+            <dx-form id="form">
+                <dxi-item itemType="group" cssClass="first-group" [colCount]="6">
+
+                    <dxi-item itemType="group" [colSpan]="4"> 
+                        <label>Descripción</label>        
+                        <dx-text-box [maxLength]="80"
+                                    [(ngModel)]="sprint.descripcion"
+                                    placeholder="Ingrese la descripción…" item-width="40%"></dx-text-box>
+                    </dxi-item>
+                    <dxi-item itemType="group" [colSpan]="2"> </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="1"> 
+                        <label>Fecha de Inicio</label> 
+                        <dx-date-box
+                        type="datetime"
+                        [(ngModel)]="sprint.fechaInicio">
+                        </dx-date-box>
+                    </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="1"> 
+                        <label>Fecha de Finalización</label> 
+                        <dx-date-box
+                            type="datetime"
+                            [(ngModel)]="sprint.fechaFin">
+                        </dx-date-box>
+                    </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="4"> </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="1">
+                        <dx-button  type="default"  text="Agregar"  (onClick)="agregarSprint()">
+                          </dx-button>
+                    </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="5"> </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="6"> </dxi-item>
+                    
+                   <dxi-item itemType="group" [colSpan]="6">
+                        <dx-data-grid   id="gridContainer"  
+                        [dataSource]="sprints"    
+                        [showRowLines]="true"
+                        [showBorders]="true">
+                            <dxo-filter-row [visible]="true"> </dxo-filter-row>
+          
+                            <dxi-column dataField="id" caption="Sprint ID" alignment="center" [width]="200"></dxi-column>
+                            <dxi-column dataField="descripcion"  caption="Sprint" alignment="left" ></dxi-column>
+                            <dxi-column dataField="fechaInicio"  caption="Fecha Inicio"  alignment="center" dataType="datetime" cellTemplate="FechaInicio"></dxi-column>
+                            <dxi-column dataField="fechaFin"  caption="Fecha Fin"  alignment="center" dataType="datetime" cellTemplate="FechaFin"></dxi-column>
+                            <dxi-column dataField="activo"  caption="Activo"  alignment="center"></dxi-column>
+                            <dxi-column caption="Acción" cellTemplate="accionTemplate" [width]="100"></dxi-column>
+                            
+                            <div *dxTemplate="let d of 'FechaInicio'">
+                                  {{d.value|date:'dd/MM/yyyy, h:mm a'}}
+                              </div>
+        
+                              <div *dxTemplate="let d of 'FechaFin'">
+                                  {{d.value|date:'dd/MM/yyyy, h:mm a'}}
+                              </div>
+        
+                            <div *dxTemplate="let d of 'accionTemplate'">
+                              <button rel="tooltip" (click)="mostrarInformacionEnPoPup(d.data)" type="button" class="btn btn-grid btn-success">
+                                  <i class="material-icons">edit</i>
+                            </button>
+                            </div>
+                            </dx-data-grid>
+                    </dxi-item>
+
+                    
+                </dxi-item>
+            </dx-form>
+
+  
+            <dx-popup class="popup" id="popuUEN" [width]="450" [height]="400" [showTitle]="true" ng-controller="Ctrl" title="Editar Sprint"
+            [dragEnabled]="false" [closeOnOutsideClick]="true" [(visible)]="_mostrarPopup" [resizeEnabled]="true">
+            <div  *dxTemplate="let data of 'content'">
+
+                <div class="col-md-12">
+                    <div class="row">
+                      <div class="form-group">
+                            <label>Descripción</label>        
+                            <dx-text-box [maxLength]="80"
+                                        [(ngModel)]="sprintEdit.descripcion"
+                                        placeholder="Ingrese la descripción…" item-width="40%"></dx-text-box>
+                      </div>
+                    </div>
+      
+                    <div class="row">
+                        <div class="form-group">
+                                <label>Fecha de Inicio</label> 
+                                <dx-date-box
+                                type="datetime"
+                                [(ngModel)]="sprintEdit.fechaInicio">
+                                </dx-date-box>
+                        </div>
+                       
+                     <div class="form-group">
+                          <label>Fecha de Finalización</label> 
+                          <dx-date-box
+                              type="datetime"
+                              [(ngModel)]="sprintEdit.fechaFin">
+                          </dx-date-box>
+      
+                      </div>
+                   </div> 
+      
+                   <div class="row">
+                   <dx-button  type="default"  text="Editar" class="btn  btn-success" (onClick)="editarSprint()">
+                    </dx-button>
+                  </div>
+                    </div>
+
+              </div>
+            </dx-popup>
+
+        </div>
+      </div>
+    </div>
+    </div> 
+  </div>
+</div>
+            
+        

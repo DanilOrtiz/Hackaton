@@ -1,0 +1,14 @@
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\Hackaton.Infraestructura.Core.dll.config
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\Hackaton.Infraestructura.Core.dll
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\Hackaton.Infraestructura.Core.pdb
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\EntityFramework.dll
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\EntityFramework.SqlServer.dll
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\Hackaton.Dominio.Core.dll
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\Hackaton.Dominio.Core.pdb
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\EntityFramework.xml
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\bin\Debug\EntityFramework.SqlServer.xml
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\obj\Debug\Hackaton.Infraestructura.Core.csprojResolveAssemblyReference.cache
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\obj\Debug\Hackaton.Infraestructura.Core.csproj.CoreCompileInputs.cache
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\obj\Debug\Hackaton.Infraestructura.Core.csproj.CopyComplete
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\obj\Debug\Hackaton.Infraestructura.Core.dll
+H:\Hackaton\Api\Api2\Hackatonl.Infraestructura.Core\obj\Debug\Hackaton.Infraestructura.Core.pdb

@@ -1,0 +1,243 @@
+﻿2017-11-11T10:54:19.5394409-06:00;VSTestExecutionThread;Info;SpecFlow+Runner execution started
+2017-11-11T10:54:19.6334503-06:00;VSTestExecutionThread;Info;SpecRun Evaluation Mode: Please purchase at http://www.specflow.org/plus to remove test execution delay.
+2017-11-11T10:54:19.6334503-06:00;VSTestExecutionThread;Info;SpecRun: running tests in C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test\bin\Debug\Farsiman.CertificacionDigital.Dominio.Test.dll
+2017-11-11T10:54:19.6344504-06:00;VSTestExecutionThread;Info;Profile: Default
+2017-11-11T10:54:28.7523621-06:00;Thread#17;Info;Discovering target: Default
+2017-11-11T10:54:28.7673636-06:00;Thread#17;Info;Discovering tests from assembly: C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test\bin\Debug\Farsiman.CertificacionDigital.Dominio.Test.dll
+Appdomain Disposed
+Test Suite Dump
+#0: Farsiman.CertificacionDigital.Dominio.Test/Default - 
+#1: Default - 
+#2: Farsiman.CertificacionDigital.Dominio.Test - 
+#3: Solicitante - 
+#6: Login - 
+#4: Agregando Solicitante, false - TestAssembly:Farsiman.CertificacionDigital.Dominio.Test/Feature:Solicitante/Scenario:Agregando+Solicitante%2c+false
+#5: Agregando Solicitante, true - TestAssembly:Farsiman.CertificacionDigital.Dominio.Test/Feature:Solicitante/Scenario:Agregando+Solicitante%2c+true
+#7: Login, false - TestAssembly:Farsiman.CertificacionDigital.Dominio.Test/Feature:Login/Scenario:Login%2c+false
+#8: Login, true - TestAssembly:Farsiman.CertificacionDigital.Dominio.Test/Feature:Login/Scenario:Login%2c+true
+End: Test Suite Dump
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #4 from normal test queue 
+Thread#0:Scheduler: considering testitem #4 for thread 0
+Thread#0:TestItem#4:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#4:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#4:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #4 for thread 0
+Thread#0:Scheduler: Test #4 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread #0: creating new test thread executor for Farsiman.CertificacionDigital.Dominio.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null (target: Default)
+Loading SpecRun type 'TechTalk.SpecRun.Framework.TestAssemblyExecutor' from: C:\Users\mfuentes\AppData\Local\Temp\VisualStudioTestExplorerExtensions\SpecRun.Runner.1.7.0-rc001\tools\TechTalk.SpecRun.Framework.Executor.dll
+Thread#0: Test #4/0 is started on thread #0
+Thread#0:T:-> Using app.config
+Thread#0:B:Dado el departamento con su estado false
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Given(@"el departamento con su estado false")]
+Thread#0:T:public void DadoElDepartamentoConSuEstadoFalse()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Y el correo del solicitante
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Given(@"el correo del solicitante ")]
+Thread#0:T:public void DadoElCorreoDelSolicitante()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Cuando se registra un solicitante
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [When(@"se registra un solicitante")]
+Thread#0:T:public void CuandoSeRegistraUnSolicitante()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Entonces la respuesta es false
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Then(@"la respuesta es false")]
+Thread#0:T:public void EntoncesLaRespuestaEsFalse()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Y el mensaje es El departamento se encuentra desativado
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Then(@"el mensaje es El departamento se encuentra desativado")]
+Thread#0:T:public void EntoncesElMensajeEsElDepartamentoSeEncuentraDesativado()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:Pending: No matching step definition found for one or more steps.
+Thread#0:T:using System;
+Thread#0:T:using TechTalk.SpecFlow;
+Thread#0:T:namespace MyNamespace
+Thread#0:T:{
+Thread#0:T:    [Binding]
+Thread#0:T:    public class StepDefinitions
+Thread#0:T:    {
+Thread#0:T:        [Given(@"el departamento con su estado false")]
+Thread#0:T:public void DadoElDepartamentoConSuEstadoFalse()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [Given(@"el correo del solicitante ")]
+Thread#0:T:public void DadoElCorreoDelSolicitante()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [When(@"se registra un solicitante")]
+Thread#0:T:public void CuandoSeRegistraUnSolicitante()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [Then(@"la respuesta es false")]
+Thread#0:T:public void EntoncesLaRespuestaEsFalse()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [Then(@"el mensaje es El departamento se encuentra desativado")]
+Thread#0:T:public void EntoncesElMensajeEsElDepartamentoSeEncuentraDesativado()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:    }
+Thread#0:T:}
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #5 from normal test queue 
+Thread#0:Scheduler: considering testitem #5 for thread 0
+Thread#0:TestItem#5:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#5:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#5:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #5 for thread 0
+Thread#0:Scheduler: Test #5 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #4/0 is finished on thread #0 as Pending within 0.1590159 seconds
+Thread#0: Test #5/0 is started on thread #0
+Thread#0:B:Dado el departamento con su estado true
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Given(@"el departamento con su estado true")]
+Thread#0:T:public void DadoElDepartamentoConSuEstadoTrue()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Y el correo del solicitante maynor.fuentes
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Given(@"el correo del solicitante maynor\.fuentes")]
+Thread#0:T:public void DadoElCorreoDelSolicitanteMaynor_Fuentes()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Cuando se registra un solicitante
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [When(@"se registra un solicitante")]
+Thread#0:T:public void CuandoSeRegistraUnSolicitante()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Entonces la respuesta es true
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Then(@"la respuesta es true")]
+Thread#0:T:public void EntoncesLaRespuestaEsTrue()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:B:Y el mensaje es El correo no tiene un formato valido.
+Thread#0:T:No matching step definition found for the step. Use the following code to create one:
+Thread#0:T:        [Then(@"el mensaje es El correo no tiene un formato valido\.")]
+Thread#0:T:public void EntoncesElMensajeEsElCorreoNoTieneUnFormatoValido_()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:Pending: No matching step definition found for one or more steps.
+Thread#0:T:using System;
+Thread#0:T:using TechTalk.SpecFlow;
+Thread#0:T:namespace MyNamespace
+Thread#0:T:{
+Thread#0:T:    [Binding]
+Thread#0:T:    public class StepDefinitions
+Thread#0:T:    {
+Thread#0:T:        [Given(@"el departamento con su estado true")]
+Thread#0:T:public void DadoElDepartamentoConSuEstadoTrue()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [Given(@"el correo del solicitante maynor\.fuentes")]
+Thread#0:T:public void DadoElCorreoDelSolicitanteMaynor_Fuentes()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [When(@"se registra un solicitante")]
+Thread#0:T:public void CuandoSeRegistraUnSolicitante()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [Then(@"la respuesta es true")]
+Thread#0:T:public void EntoncesLaRespuestaEsTrue()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:        [Then(@"el mensaje es El correo no tiene un formato valido\.")]
+Thread#0:T:public void EntoncesElMensajeEsElCorreoNoTieneUnFormatoValido_()
+Thread#0:T:{
+Thread#0:T:    ScenarioContext.Current.Pending();
+Thread#0:T:}
+Thread#0:T:    }
+Thread#0:T:}
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #7 from normal test queue 
+Thread#0:Scheduler: considering testitem #7 for thread 0
+Thread#0:TestItem#7:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#7:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#7:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #7 for thread 0
+Thread#0:Scheduler: Test #7 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #5/0 is finished on thread #0 as Pending within 0.0290029 seconds
+Thread#0: Test #7/0 is started on thread #0
+Thread#0:B:Dado una clave ingresada por el usuario
+Thread#0:T:done: LoginSteps.DadoUnaClaveIngresadaPorElUsuario("") (0.0s)
+Thread#0:B:Y el estado del usuario false
+Thread#0:T:done: LoginSteps.DadoElEstadoDelUsuario("false") (0.0s)
+Thread#0:B:Y la clave que tiene configurada el usuario
+Thread#0:T:done: LoginSteps.DadoLaClaveQueTieneConfiguradaElUsuario("") (0.0s)
+Thread#0:B:Cuando él usuario desea ingresar
+Thread#0:T:done: LoginSteps.CuandoElUsuarioDeseaIngresar() (0.0s)
+Thread#0:B:Entonces el resultado sera False
+Thread#0:T:done: LoginSteps.EntoncesElResultadoSera("False") (0.0s)
+Thread#0:B:Y El mensaje es El usuario no está activo
+Thread#0:T:done: LoginSteps.EntoncesElMensajeEs("El usuario no est...") (0.0s)
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: testitem #8 from normal test queue 
+Thread#0:Scheduler: considering testitem #8 for thread 0
+Thread#0:TestItem#8:testItemMatchesCurrentTestThread:UnSpecific
+Thread#0:TestItem#8:runsOnOneOtherThreadSpecific:False
+Thread#0:TestItem#8:runsOnOneOtherThreadUnspecific:False
+Thread#0:Scheduler: using testitem #8 for thread 0
+Thread#0:Scheduler: Test #8 is scheduled for thread
+Thread#0:Scheduler: with testItemExecutionIndex 0
+Thread#0: Test #7/0 is finished on thread #0 as Succeeded within 0.0210021 seconds
+Thread#0: Test #8/0 is started on thread #0
+Thread#0:B:Dado una clave ingresada por el usuario 1234
+Thread#0:T:done: LoginSteps.DadoUnaClaveIngresadaPorElUsuario("1234") (0.0s)
+Thread#0:B:Y el estado del usuario true
+Thread#0:T:done: LoginSteps.DadoElEstadoDelUsuario("true") (0.0s)
+Thread#0:B:Y la clave que tiene configurada el usuario 1234
+Thread#0:T:done: LoginSteps.DadoLaClaveQueTieneConfiguradaElUsuario("1234") (0.0s)
+Thread#0:B:Cuando él usuario desea ingresar
+Thread#0:T:done: LoginSteps.CuandoElUsuarioDeseaIngresar() (0.0s)
+Thread#0:B:Entonces el resultado sera True
+Thread#0:T:done: LoginSteps.EntoncesElResultadoSera("True") (0.0s)
+Thread#0:B:Y El mensaje es OK
+Thread#0:T:done: LoginSteps.EntoncesElMensajeEs("OK") (0.0s)
+Thread#0:Scheduler: get next test for thread 0
+Thread#:Scheduler: at the end of normal test queue
+Thread#0:Scheduler: enumerator for thread is at end
+Thread#0:Scheduler: No more tests for thread
+Thread#0: Test #8/0 is finished on thread #0 as Succeeded within 0.0090009 seconds
+Appdomain Disposed
+Thread#-1:Scheduler: get next test for thread -1
+Thread#:Scheduler: at the end of normal test queue
+Thread#-1:Scheduler: enumerator for thread is at end
+Total: 4
+Succeeded: 2
+Ignored: 0
+Pending: 2
+Skipped: 0
+Failed: 0

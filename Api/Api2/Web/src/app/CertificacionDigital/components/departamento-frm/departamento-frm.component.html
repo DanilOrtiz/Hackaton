@@ -1,0 +1,137 @@
+
+
+
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card">
+          <div class="card-header card-header-icon" data-background-color="red">
+            <i class="material-icons">class</i>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">Departamentos</h4>
+
+            <dx-responsive-box
+            singleColumnScreen="sm"
+            [(screenByWidth)]="screen">
+            <dxi-item class="content item">
+          
+            <dx-form id="form">
+              <dxi-item itemType="group" cssClass="first-group" [colCount]="2">
+
+                    <dxi-item itemType="group" [colSpan]="1"> 
+                        <label>Descripción</label>
+                          <dx-text-area Caption="Address"
+                          [height]="90"
+                          [maxLength]="900"
+                          [(ngModel)]="departamento.descripcion">
+                        </dx-text-area>   
+                      </dxi-item>   
+
+                      <dxi-item itemType="group" [colSpan]="1"></dxi-item> 
+
+
+                <dxi-item itemType="group" [colSpan]="1">
+                    <label>UEN</label>
+                      <dx-lookup
+                            [dataSource]="uens"
+                            [closeOnOutsideClick]="true"
+                            [showPopupTitle]="false"
+                            displayExpr="descripcion"
+                            valueExpr="id"
+                            [(ngModel)]="departamento.uenId">
+                      </dx-lookup>
+                </dxi-item>
+
+                <dxi-item itemType="group" [colSpan]="1"></dxi-item> 
+
+                <dxi-item itemType="group" [colSpan]="1">
+                    <dx-button  type="default"  text="Agregar"  (onClick)="agregarDepartamento()">
+                      </dx-button>
+                </dxi-item>
+
+                <dxi-item itemType="group" [colSpan]="1"></dxi-item> 
+
+                <dxi-item itemType="group" [colSpan]="2">
+                    
+                    <dx-data-grid   id="gridContainer"  
+                    [dataSource]="departamentos"  
+                    [showRowLines]="true"
+                    [showBorders]="true">
+                        <dxo-filter-row [visible]="true"> </dxo-filter-row>
+      
+                        <dxi-column dataField="id" caption="Departamento ID" alignment="center" [width]="200"></dxi-column>
+                        <dxi-column dataField="descripcion"  caption="Departamento" alignment="left" ></dxi-column>
+                        <dxi-column caption="UEN" dataField="uen.descripcion"  alignment="center" ></dxi-column>
+                        <dxi-column caption="Acción" cellTemplate="accionTemplate" [width]="100"></dxi-column>
+                        <dxi-column dataField="activo"  caption="Activo"  alignment="center" [width]="100"></dxi-column>
+                        <div *dxTemplate="let d of 'accionTemplate'">
+                          <button rel="tooltip" (click)="mostrarInformacionDeDepartamentoEnPopup(d.data)" type="button" class="btn btn-grid btn-success">
+                              <i class="material-icons">edit</i>
+                        </button>
+                        </div>
+                     
+                    </dx-data-grid>
+                </dxi-item>
+            </dxi-item>
+
+              </dx-form>
+
+            </dxi-item>
+            </dx-responsive-box>
+
+
+
+        <dx-popup class="popup" id="popuDepartamento" [width]="450" [height]="380" [showTitle]="true" ng-controller="Ctrl" title="Editar Departamento"
+        [dragEnabled]="false" [closeOnOutsideClick]="true" [(visible)]="_mostrarPopup" [resizeEnabled]="true">
+        <div  *dxTemplate="let data of 'content'">
+               
+            <dx-form id="form">
+            <dxi-item itemType="group" cssClass="first-group" [colCount]="2">
+
+                <dxi-item itemType="group" [colSpan]="2"> 
+                    <label>Descripción</label>
+                      <dx-text-area Caption="Address"
+                      [height]="90"
+                      [maxLength]="900"
+                      [(ngModel)]="departamentoEdit.descripcion">
+                    </dx-text-area>   
+                  </dxi-item>   
+
+            <dxi-item itemType="group" [colSpan]="2">
+                <label>UEN</label>
+                  <dx-lookup
+                        [dataSource]="uens"
+                        [closeOnOutsideClick]="true"
+                        [showPopupTitle]="false"
+                        displayExpr="descripcion"
+                        valueExpr="id"
+                        [(ngModel)]="departamentoEdit.uenId">
+                  </dx-lookup>
+            </dxi-item>
+
+            <dxi-item itemType="group" [colSpan]="1">
+                <label>Activo</label>
+                  <dx-check-box [(ngModel)]="departamentoEdit.activo" ></dx-check-box>
+                     
+            </dxi-item>
+
+            <dxi-item itemType="group" [colSpan]="1"></dxi-item>
+
+            <dxi-item itemType="group" [colSpan]="1">
+                <dx-button  class="btn  btn-success"  text="Editar"  (onClick)="editarDepartamento()">
+                  </dx-button>
+            </dxi-item>
+          </dxi-item>
+        </dx-form>
+        </div>
+
+      </dx-popup>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>

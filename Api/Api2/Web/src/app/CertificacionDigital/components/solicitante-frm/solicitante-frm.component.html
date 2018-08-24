@@ -1,0 +1,155 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card">
+          <div class="card-header card-header-icon" data-background-color="red">
+            <i class="material-icons">class</i>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">Solicitantes</h4>
+
+
+                <dx-form id="form" ngForm="#form">
+
+                    <dxi-item itemType="group" cssClass="first-group" [colCount]="4">
+
+                        <dxi-item itemType="group" [colSpan]="2">
+                            <label>Usuarios</label>
+                              <dx-lookup
+                                    [items]="usuarios"
+                                    [closeOnOutsideClick]="true"
+                                    [showPopupTitle]="false"
+                                    displayExpr="nombreCompleto"
+                                    placeholder="Seleccione un Usuario"
+                                    (onValueChanged)="CargarInformacionDeUsuario($event)"
+                                    valueExpr="id"
+                                    [(ngModel)]="usuario.id">
+                              </dx-lookup>
+                        </dxi-item>
+
+                        <dxi-item itemType="group" [colSpan]="2"></dxi-item>
+
+
+                        <dxi-item itemType="group" [colSpan]="1">
+                            <label>Nombre</label>
+                            <dx-text-box [(ngModel)]="usuario.nombreCompleto"></dx-text-box>
+                       </dxi-item>
+
+                       <dxi-item itemType="group" [colSpan]="1">
+                          <label>Correo</label>
+                          <dx-text-box [(ngModel)]="usuario.email" email></dx-text-box>
+                        </dxi-item>
+                        <dxi-item itemType="group" [colSpan]="2"></dxi-item>
+
+                        <dxi-item itemType="group" [colSpan]="1">
+                            <label>Telefono</label>
+                            <dx-text-box [(ngModel)]="usuario.telefono" ></dx-text-box>
+                        </dxi-item>
+
+                        <dxi-item itemType="group" [colSpan]="1">
+                            <label>Departamento</label>
+                              <dx-lookup
+                                    [items]="departamentos"
+                                    [closeOnOutsideClick]="true"
+                                    [showPopupTitle]="false"
+                                    displayExpr="descripcion"
+                                    placeholder="Seleccione un Departamento"
+                                    valueExpr="id"
+                                    [(ngModel)]="departamento.id">
+                              </dx-lookup>
+                        </dxi-item>
+
+                        <dxi-item itemType="group" [colSpan]="2"></dxi-item>
+
+                        <dxi-item itemType="group" [colSpan]="1">
+                          <dx-button  type="default"  text="Agregar"  (onClick)="AgregarSolicitante()" disabled=true>
+                          </dx-button>
+                        </dxi-item>
+                        <dxi-item itemType="group" [colSpan]="3"></dxi-item>
+
+                        <dxi-item itemType="group" [colSpan]="4">
+                    
+                            <dx-data-grid   id="gridContainer"  
+                            [dataSource]="solicitantes"  
+                            [showRowLines]="true"
+                            [showBorders]="true">
+                                <dxo-filter-row [visible]="true"> </dxo-filter-row>
+              
+                                <dxi-column dataField="id" caption="Solicitante ID" alignment="center" [width]="200"></dxi-column>
+                                <dxi-column dataField="descripcion"  caption="Solicitante" alignment="left" ></dxi-column>
+                                <dxi-column dataField="correo"  caption="Correo" alignment="left" ></dxi-column>
+                                <dxi-column dataField="telefono"  caption="telefono" alignment="left" ></dxi-column>
+                                <dxi-column caption="Departamento" dataField="departamento.descripcion"  alignment="center" ></dxi-column>
+                                <dxi-column dataField="activo"  caption="Activo"  alignment="center" [width]="100"></dxi-column>
+                                <dxi-column caption="Acción" cellTemplate="accionTemplate" [width]="100"></dxi-column>
+                                
+                                <div *dxTemplate="let d of 'accionTemplate'">
+                                  <button rel="tooltip" (click)="MostrarInformacionDeSolicitanteEnPopup(d.data)" type="button" class="btn btn-grid btn-success">
+                                      <i class="material-icons">edit</i>
+                                </button>
+                                </div>
+                             
+                            </dx-data-grid>
+                        </dxi-item>
+                      </dxi-item>
+                  </dx-form>
+
+
+        <dx-popup class="popup" id="popuSolicitante" [width]="450" [height]="400" [showTitle]="true" ng-controller="Ctrl" title="Editar Solicitante"
+        [dragEnabled]="false" [closeOnOutsideClick]="true" [(visible)]="_mostrarPopup" [resizeEnabled]="true">
+        <div  *dxTemplate="let data of 'content'">
+            <dx-form id="form">
+
+                <dxi-item itemType="group" cssClass="first-group" [colCount]="1">
+                    <dxi-item itemType="group" [colSpan]="1">
+                        <label>Nombre</label>
+                        <dx-text-box [(ngModel)]="solicitanteEdit.descripcion"></dx-text-box>
+                   </dxi-item>
+
+                   <dxi-item itemType="group" [colSpan]="1">
+                      <label>Correo</label>
+                      <dx-text-box [(ngModel)]="solicitanteEdit.correo" ></dx-text-box>
+                    </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="1">
+                        <label>Telefono</label>
+                        <dx-text-box [(ngModel)]="solicitanteEdit.telefono" ></dx-text-box>
+                    </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="1">
+                        <label>Departamento</label>
+                          <dx-lookup
+                                [items]="departamentos"
+                                [closeOnOutsideClick]="true"
+                                [showPopupTitle]="false"
+                                displayExpr="descripcion"
+                                placeholder="Seleccione un Departamento"
+                                valueExpr="id"
+                                [(ngModel)]="departamentoEdit.id">
+                          </dx-lookup>
+                    </dxi-item>
+
+                    <dxi-item itemType="group" [colSpan]="1">
+                        <dx-button  class="btn  btn-success"  text="Editar" (onClick)="EditarSolicitante()">
+                      </dx-button>
+                    </dxi-item>
+
+                  </dxi-item>
+            </dx-form>
+
+          </div>
+
+        </dx-popup>
+
+
+
+
+          </div>
+
+        </div>
+      </div>
+      </div>
+      </div>
+      

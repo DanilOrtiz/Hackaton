@@ -1,0 +1,6 @@
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test.BDD\bin\Debug\Farsiman.CertificacionDigital.Dominio.Test.BDD.dll
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test.BDD\bin\Debug\Farsiman.CertificacionDigital.Dominio.Test.BDD.pdb
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test.BDD\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test.BDD\obj\Debug\Farsiman.CertificacionDigital.Dominio.Test.BDD.csprojResolveAssemblyReference.cache
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test.BDD\obj\Debug\Farsiman.CertificacionDigital.Dominio.Test.BDD.dll
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Test.BDD\obj\Debug\Farsiman.CertificacionDigital.Dominio.Test.BDD.pdb

@@ -1,0 +1,17 @@
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb
+C:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.csprojResolveAssemblyReference.cache
+G:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
+G:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb
+G:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.csprojResolveAssemblyReference.cache
+G:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.csproj.CoreCompileInputs.cache
+G:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
+G:\Programas\Trabajo\FarsimanCertificacionDigital\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb
+H:\Hackaton\Api\Api2\Hackatonl.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
+H:\Hackaton\Api\Api2\Hackatonl.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb
+H:\Hackaton\Api\Api2\Hackatonl.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.csprojResolveAssemblyReference.cache
+H:\Hackaton\Api\Api2\Hackatonl.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.csproj.CoreCompileInputs.cache
+H:\Hackaton\Api\Api2\Hackatonl.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
+H:\Hackaton\Api\Api2\Hackatonl.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb

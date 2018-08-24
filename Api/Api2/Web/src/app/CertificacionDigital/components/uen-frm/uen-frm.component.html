@@ -1,0 +1,92 @@
+<div class="main-content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="card">
+          <div class="card-header card-header-icon" data-background-color="red">
+            <i class="material-icons">class</i>
+          </div>
+          <div class="card-content">
+            <h4 class="card-title">UEN</h4>
+
+           
+       
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label>Descripción</label>
+                    <dx-text-area
+                        [height]="90"
+                        [maxLength]="900"
+                        [(ngModel)]="uen.descripcion">
+                    </dx-text-area>
+                    <br>
+                    <dx-button  type="default"  text="Agregar"  (onClick)="AgregarUEN()">
+                    </dx-button>
+                </div>
+              </div>
+           
+
+            <div class="row">
+            <div class="col-md-12">
+            <div class="dx-border-grid">
+                  <dx-data-grid   id="gridContainer"  [dataSource]="uens">
+                  <dxo-filter-row [visible]="true"> </dxo-filter-row>
+
+                  <dxi-column dataField="id" caption="UEND ID" alignment="center" [width]="200"></dxi-column>
+                  <dxi-column dataField="descripcion"  caption="UEN" alignment="left" ></dxi-column>
+                  <dxi-column dataField="activo"  caption="Activo"  alignment="center" [width]="100"></dxi-column>
+                  <dxi-column caption="Acción" cellTemplate="accionTemplate" [width]="100"></dxi-column>
+                  
+                  <div *dxTemplate="let d of 'accionTemplate'">
+                    <button rel="tooltip" (click)="mostrarInformacionUENenPoPup(d.data)" type="button" class="btn btn-grid btn-success">
+                        <i class="material-icons">edit</i>
+                  </button>
+                  </div>
+                  </dx-data-grid>
+
+                </div>
+              </div>  
+          </div>
+        </div>
+
+
+
+        <dx-popup class="popup" id="popuUEN" [width]="450" [height]="360" [showTitle]="true" ng-controller="Ctrl" title="Editar UEN"
+        [dragEnabled]="false" [closeOnOutsideClick]="true" [(visible)]="_mostrarPopup" [resizeEnabled]="true">
+        <div  *dxTemplate="let data of 'content'">
+                   
+          <div class="col-md-12">
+            <div class="form-group">
+                <label>Descripción</label>
+                <dx-text-area
+                    [height]="90"
+                    [maxLength]="900"
+                    [(ngModel)]="uenEdit.descripcion">
+                </dx-text-area>
+                <br>
+
+            <div class="dx-field">
+              <div class="dx-field-label">Activo</div>
+                <div class="dx-field-value">
+                <dx-check-box [(ngModel)]="uenEdit.activo" ></dx-check-box>
+              </div>
+            </div>
+
+                <dx-button  type="default"  text="Editar" class="btn  btn-success"  (onClick)="editarUEN()">
+                </dx-button>
+            </div>
+          </div>
+
+
+
+
+        </div>
+
+      </dx-popup>
+    </div>
+
+  </div>
+</div>
+</div>
+</div>
