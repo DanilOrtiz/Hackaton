@@ -46,7 +46,7 @@ namespace Hackaton.Infraestructure.Core
 
         public List<TEntidad> ObtenerTodos()
         {
-            return Tabla.ToList();
+           return Tabla.ToList();
         }
 
         public TEntidad ObtenerPorID(int id)

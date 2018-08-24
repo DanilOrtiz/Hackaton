@@ -26,7 +26,7 @@ namespace Hackaton.App_Start
 
         public static void RegistrarDependencias(IKernel kernel)
         {
-            kernel.Bind(typeof(IRepositorio<>)).To(typeof(Repositorio<>));
+           kernel.Bind(typeof(IRepositorio<>)).To(typeof(Repositorio<>));
             kernel.Bind<IUnitOfWork, IEntityUnitOfWork>().To<HackatonUnitOfWork>()
                 .WithConstructorArgument("repositorioType", x => { return typeof(Repositorio<>); });
 

@@ -13,8 +13,7 @@ namespace Hackaton.Infraestructure.Maps
         {
             Property(x => x.Nombre).HasColumnType("varchar").HasMaxLength(500);
             Property(x => x.Correo).HasColumnType("varchar").HasMaxLength(500);
-            Property(x => x.Clave).HasColumnType("varchar").HasMaxLength(500);
-            Property(x => x.ClaveEncriptada).HasColumnType("varbinary").HasMaxLength(500);
+            Property(x => x.Clave).HasColumnType("varbinary").HasMaxLength(500);
             Property(x => x.CiudadId).HasColumnName("Ciudad_Id");
             Property(x => x.PerfilId).HasColumnName("Perfil_Id");
             

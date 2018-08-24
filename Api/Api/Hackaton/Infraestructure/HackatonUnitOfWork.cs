@@ -24,7 +24,7 @@ namespace Hackaton.Infraestructure
             modelBuilder.Configurations.Add(new CiudadMap());
             modelBuilder.Configurations.Add(new EstadoMap());
             modelBuilder.Configurations.Add(new PerfilMap());
-            //modelBuilder.Configurations.Add(new SucesoCategoriaMap());
+            modelBuilder.Configurations.Add(new SucesoCategoriaMap());
             modelBuilder.Configurations.Add(new SucesoComentarioMap());
             modelBuilder.Configurations.Add(new SucesoMultimediaMap());
             modelBuilder.Configurations.Add(new SucesoMap());
@@ -32,6 +32,10 @@ namespace Hackaton.Infraestructure
             modelBuilder.Configurations.Add(new SucesoValoracionMap());
             modelBuilder.Configurations.Add(new SucesoValoracionTipoMap());
             modelBuilder.Configurations.Add(new UsuarioMap());
+            modelBuilder.Configurations.Add(new EmpresaMap());
+            modelBuilder.Configurations.Add(new EmpresaCategoriaMap());
+
+
 
 
         }
