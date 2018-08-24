@@ -225,6 +225,8 @@
     <Compile Include="Domain\Core\Repositorios\IUnitOfWork.cs" />
     <Compile Include="Domain\Entities\Categoria.cs" />
     <Compile Include="Domain\Entities\Ciudad.cs" />
+    <Compile Include="Domain\Entities\Empresa.cs" />
+    <Compile Include="Domain\Entities\EmpresaCategoria.cs" />
     <Compile Include="Domain\Entities\Estado.cs" />
     <Compile Include="Domain\Entities\Perfil.cs" />
     <Compile Include="Domain\Entities\Suceso.cs" />
@@ -246,6 +248,8 @@
     <Compile Include="Infraestructure\HackatonUnitOfWork.cs" />
     <Compile Include="Infraestructure\Maps\CategoriaMap.cs" />
     <Compile Include="Infraestructure\Maps\CiudadMap.cs" />
+    <Compile Include="Infraestructure\Maps\EmpresaCategoriaMap.cs" />
+    <Compile Include="Infraestructure\Maps\EmpresaMap.cs" />
     <Compile Include="Infraestructure\Maps\EstadoMap.cs" />
     <Compile Include="Infraestructure\Maps\PerfilMap.cs" />
     <Compile Include="Infraestructure\Maps\SucesoCategoriaMap.cs" />

@@ -21,6 +21,7 @@ namespace Hackaton.Domain.Entities
         public virtual List<Suceso> Sucesos { get; set; }
         public virtual List<SucesoComentario> SucesosComentarios { get; set; }
         public virtual List<SucesoValoracion> SucesosValoraciones { get; set; }
+        public virtual List<Empresa> Empresas{ get; set; }
 
         public bool EsValido(ref string mensaje)
         {
