@@ -24,6 +24,11 @@ namespace Hackaton.App_Start
             {
                 x.AddProfiles("Hackaton");
             });
+
+            UnityContainer = new UnityContainer();
+            UnityContainer.RegisterType<IEntityUnitOfWork, HackatonUnitOfWork>();
+            UnityContainer.RegisterType(typeof(IRepositorio<>), typeof(Repositorio<>));
+            UnityContainer.RegisterType<IHackatonService, HackatonService>();
         }
 
         public static void RegistrarDependencias(IKernel kernel)
@@ -37,9 +42,7 @@ namespace Hackaton.App_Start
             // //kernel.Bind<ISQLServerManagementAppService>().To<SQLServerManagementAppService>();
             // Kernel = kernel;
 
-            UnityContainer.RegisterType<IEntityUnitOfWork, HackatonUnitOfWork>();
-            UnityContainer.RegisterType(typeof(IRepositorio<>), typeof(Repositorio<>));
-            UnityContainer.RegisterType<IHackatonService, HackatonService>();
+        
         }
 
         //public static T Get<T>()

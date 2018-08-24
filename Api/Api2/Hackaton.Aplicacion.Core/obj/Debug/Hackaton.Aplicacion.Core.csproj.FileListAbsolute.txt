@@ -1,0 +1,7 @@
+H:\Hackaton\Api\Api2\Hackaton.Aplicacion.Core\bin\Debug\Hackaton.Aplicacion.Core.dll
+H:\Hackaton\Api\Api2\Hackaton.Aplicacion.Core\bin\Debug\Hackaton.Aplicacion.Core.pdb
+H:\Hackaton\Api\Api2\Hackaton.Aplicacion.Core\obj\Debug\Hackaton.Aplicacion.Core.csprojResolveAssemblyReference.cache
+H:\Hackaton\Api\Api2\Hackaton.Aplicacion.Core\obj\Debug\Hackaton.Aplicacion.Core.csproj.CoreCompileInputs.cache
+H:\Hackaton\Api\Api2\Hackaton.Aplicacion.Core\obj\Debug\Hackaton.Aplicacion.Core.csproj.CopyComplete
+H:\Hackaton\Api\Api2\Hackaton.Aplicacion.Core\obj\Debug\Hackaton.Aplicacion.Core.dll
+H:\Hackaton\Api\Api2\Hackaton.Aplicacion.Core\obj\Debug\Hackaton.Aplicacion.Core.pdb

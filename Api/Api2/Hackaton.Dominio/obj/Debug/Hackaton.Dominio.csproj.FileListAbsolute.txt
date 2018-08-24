@@ -1,0 +1,9 @@
+H:\Hackaton\Api\Api2\Hackaton.Dominio\bin\Debug\Hackaton.Dominio.dll
+H:\Hackaton\Api\Api2\Hackaton.Dominio\bin\Debug\Hackaton.Dominio.pdb
+H:\Hackaton\Api\Api2\Hackaton.Dominio\bin\Debug\Hackaton.Dominio.Core.dll
+H:\Hackaton\Api\Api2\Hackaton.Dominio\bin\Debug\Hackaton.Dominio.Core.pdb
+H:\Hackaton\Api\Api2\Hackaton.Dominio\obj\Debug\Hackaton.Dominio.csprojResolveAssemblyReference.cache
+H:\Hackaton\Api\Api2\Hackaton.Dominio\obj\Debug\Hackaton.Dominio.csproj.CoreCompileInputs.cache
+H:\Hackaton\Api\Api2\Hackaton.Dominio\obj\Debug\Hackaton.Dominio.csproj.CopyComplete
+H:\Hackaton\Api\Api2\Hackaton.Dominio\obj\Debug\Hackaton.Dominio.dll
+H:\Hackaton\Api\Api2\Hackaton.Dominio\obj\Debug\Hackaton.Dominio.pdb
