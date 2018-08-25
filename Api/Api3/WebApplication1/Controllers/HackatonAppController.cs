@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Hackaton.Aplicacion.Hackaton.Servicios;
+using Hackaton.Aplicacion.IoC;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -7,7 +9,40 @@ using System.Web.Http;
 
 namespace WebApplication1.Controllers
 {
+    [RoutePrefix("api")]
     public class HackatonAppController : ApiController
     {
+        IHackatonAppService hackatonService = Contenedor.Resolve<IHackatonAppService>();
+
+        [HttpGet, Route("ObtenerSucesosValoracion")]
+        public IHttpActionResult ObtenerSucesosValoracion()
+        {
+            var resultado = hackatonService.ObtenerSucesosValoracion();
+            return Ok(resultado);
+        }
+        [HttpGet, Route("ObtenerSucesosMultimedia")]
+        public IHttpActionResult ObtenerSucesosMultimedia()
+        {
+            var resultado = hackatonService.ObtenerSucesosMultimedia();
+            return Ok(resultado);
+        }
+        [HttpGet, Route("ObtenerSucesosCategorias")]
+        public IHttpActionResult ObtenerSucesosCategorias()
+        {
+            var resultado = hackatonService.ObtenerSucesosComentarios();
+            return Ok(resultado);
+        }
+        [HttpGet, Route("ObtenerSucesosComentarios")]
+        public IHttpActionResult ObtenerSucesosComentarios()
+        {
+            var resultado = hackatonService.ObtenerSucesosComentarios();
+            return Ok(resultado);
+        }
+        [HttpGet, Route("ObtenerSucesos")]
+        public IHttpActionResult ObtenerSucesos()
+        {
+            var resultado = hackatonService.ObtenerSucesos();
+            return Ok(resultado);
+        }
     }
 }

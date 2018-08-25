@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Presentacion", "1.0 Presentacion", "{C3D954D1-39E1-4D76-9C52-E138268336AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0 Servicios Distribuidos", "2.0 Servicios Distribuidos", "{388D1798-9CF0-479E-846C-B1C542694CA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0 Aplicacion", "3.0 Aplicacion", "{185641BE-4C90-4FC0-8E9D-C19A0FC83CA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 Dominio", "4.0 Dominio", "{9B87D725-C3E3-4E80-BEC3-98BB09D77E4F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.0 Infraestructura", "5.0 Infraestructura", "{8401BF8E-466C-4F29-A2B7-94ED7B01268B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Dominio", "Hackaton.Dominio\Hackaton.Dominio.csproj", "{3CE7FB5D-A6AB-4F45-A645-A2C1E9A4E8DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Dominio.Core", "Hackaton.Dominio.Core\Hackaton.Dominio.Core.csproj", "{9EFA06EF-8D0C-4FF1-907E-7BE803873D31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Infraestructura", "Hackaton.Infraestructura\Hackaton.Infraestructura.csproj", "{931D4CF1-8824-4CED-AD48-89244015C5A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Infraestructura.Core", "Hackaton.Infraestructura.Core\Hackaton.Infraestructura.Core.csproj", "{ACB0C7E9-EAE8-43AF-9E7D-B68EEF137C93}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion", "Hackaton.Aplicacion\Hackaton.Aplicacion.csproj", "{9551753E-590C-4C32-B103-F29E8CE7D8F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion.Core", "Hackaton.Aplicacion.Core\Hackaton.Aplicacion.Core.csproj", "{72CBB8E3-1B05-44AF-A26F-2F52B7276E8D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion.IoC", "Hackaton.Aplicacion.IoC\Hackaton.Aplicacion.IoC.csproj", "{8C3975D8-4215-4B36-AA14-FECCA20A9803}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api", "..\..\Api3\WebApplication1\Api.csproj", "{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CE7FB5D-A6AB-4F45-A645-A2C1E9A4E8DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CE7FB5D-A6AB-4F45-A645-A2C1E9A4E8DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CE7FB5D-A6AB-4F45-A645-A2C1E9A4E8DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CE7FB5D-A6AB-4F45-A645-A2C1E9A4E8DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9EFA06EF-8D0C-4FF1-907E-7BE803873D31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9EFA06EF-8D0C-4FF1-907E-7BE803873D31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9EFA06EF-8D0C-4FF1-907E-7BE803873D31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9EFA06EF-8D0C-4FF1-907E-7BE803873D31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{931D4CF1-8824-4CED-AD48-89244015C5A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{931D4CF1-8824-4CED-AD48-89244015C5A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{931D4CF1-8824-4CED-AD48-89244015C5A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{931D4CF1-8824-4CED-AD48-89244015C5A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB0C7E9-EAE8-43AF-9E7D-B68EEF137C93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB0C7E9-EAE8-43AF-9E7D-B68EEF137C93}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB0C7E9-EAE8-43AF-9E7D-B68EEF137C93}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB0C7E9-EAE8-43AF-9E7D-B68EEF137C93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9551753E-590C-4C32-B103-F29E8CE7D8F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9551753E-590C-4C32-B103-F29E8CE7D8F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9551753E-590C-4C32-B103-F29E8CE7D8F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9551753E-590C-4C32-B103-F29E8CE7D8F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72CBB8E3-1B05-44AF-A26F-2F52B7276E8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72CBB8E3-1B05-44AF-A26F-2F52B7276E8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72CBB8E3-1B05-44AF-A26F-2F52B7276E8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72CBB8E3-1B05-44AF-A26F-2F52B7276E8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C3975D8-4215-4B36-AA14-FECCA20A9803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C3975D8-4215-4B36-AA14-FECCA20A9803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C3975D8-4215-4B36-AA14-FECCA20A9803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C3975D8-4215-4B36-AA14-FECCA20A9803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3CE7FB5D-A6AB-4F45-A645-A2C1E9A4E8DB} = {9B87D725-C3E3-4E80-BEC3-98BB09D77E4F}
+		{9EFA06EF-8D0C-4FF1-907E-7BE803873D31} = {9B87D725-C3E3-4E80-BEC3-98BB09D77E4F}
+		{931D4CF1-8824-4CED-AD48-89244015C5A8} = {8401BF8E-466C-4F29-A2B7-94ED7B01268B}
+		{ACB0C7E9-EAE8-43AF-9E7D-B68EEF137C93} = {8401BF8E-466C-4F29-A2B7-94ED7B01268B}
+		{9551753E-590C-4C32-B103-F29E8CE7D8F8} = {185641BE-4C90-4FC0-8E9D-C19A0FC83CA8}
+		{72CBB8E3-1B05-44AF-A26F-2F52B7276E8D} = {185641BE-4C90-4FC0-8E9D-C19A0FC83CA8}
+		{8C3975D8-4215-4B36-AA14-FECCA20A9803} = {185641BE-4C90-4FC0-8E9D-C19A0FC83CA8}
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D} = {388D1798-9CF0-479E-846C-B1C542694CA8}
+	EndGlobalSection
+EndGlobal

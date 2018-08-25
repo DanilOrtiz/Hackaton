@@ -1,5 +1,5 @@
-﻿using Farsiman.CertificacionDigital.Aplicacion.CertificacionDigital.Dtos.Usuarios;
-using Farsiman.CertificacionDigital.Aplicacion.CertificacionDigital.Servicios.Login;
+﻿using Hackaton.Aplicacion.Hackaton.Dtos.Usuarios;
+using Hackaton.Aplicacion.Hackaton.Servicios.Login;
 using Hackaton.Aplicacion.IoC;
 using Hackaton.Application.Dtos;
 using Hackaton.Application.Services;

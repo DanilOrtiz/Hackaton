@@ -63,5 +63,21 @@ namespace WebApplication1.Controllers
             var perfiles = hackatonService.ObtenerPerfiles();
             return Ok(perfiles);
         }
+
+        [HttpPost]
+        [Route("ObtenerTopDeSuceso")]
+        public IHttpActionResult ObtenerTopDeSuceso(int top)
+        {
+            var sucesos = hackatonService.ObtenerTopDeSucesos(top);
+            return Ok(sucesos);
+        }
+
+        [Route("ObtenerTopDeSucesosMenorDeId/{top}/{sucesoId}")]
+        [HttpPost]
+        public IHttpActionResult ObtenerTopDeSucesosMenorDeId(int top, int sucesoId)
+        {
+            var sucesos = hackatonService.ObtenerTopDeSucesosMenorDeId(top, sucesoId);
+            return Ok(sucesos);
+        }
     }
 }
