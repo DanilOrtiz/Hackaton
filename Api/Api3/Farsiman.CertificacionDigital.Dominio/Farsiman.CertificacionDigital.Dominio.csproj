@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Farsiman.CertificacionDigital.Dominio</RootNamespace>
+    <AssemblyName>Farsiman.CertificacionDigital.Dominio</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CertificacionDigital\Entidades\Certificaciones\Certificacion.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Certificaciones\CertificacionCriterio.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Certificaciones\CertificacionSolicitante.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Departamentos\Departamento.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Permisos\Permiso.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Proyectos\Proyecto.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="CertificacionDigital\Entidades\Proyectos\ProyectoCriterio.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Solicitantes\Solicitante.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Sprints\Sprint.cs" />
+    <Compile Include="CertificacionDigital\Entidades\UENS\UEN.cs" />
+    <Compile Include="CertificacionDigital\Entidades\Usuarios\Usuario.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\CertificacionServicioDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\CertificacionSolicitanteServiceDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\ICertificacionServiceDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\ICertificacionSolicitanteServiceDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\ILoginServiceDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\LoginServiceDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Proyectos\IProyectoServicioDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Proyectos\ProyectoServicioDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Solicitantes\ISolicitanteServiceDominio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Solicitantes\SolicitanteServiceDominio.cs" />
+    <Compile Include="Hackaton\Categoria.cs" />
+    <Compile Include="Hackaton\Ciudad.cs" />
+    <Compile Include="Hackaton\Empresa.cs" />
+    <Compile Include="Hackaton\EmpresaCategoria.cs" />
+    <Compile Include="Hackaton\Estado.cs" />
+    <Compile Include="Hackaton\Perfil.cs" />
+    <Compile Include="Hackaton\Suceso.cs" />
+    <Compile Include="Hackaton\SucesoCategoria.cs" />
+    <Compile Include="Hackaton\SucesoComentario.cs" />
+    <Compile Include="Hackaton\SucesoMultimedia.cs" />
+    <Compile Include="Hackaton\SucesoMultimediaTipo.cs" />
+    <Compile Include="Hackaton\SucesoValoracion.cs" />
+    <Compile Include="Hackaton\SucesoValoracionTipo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Dominio.Core\Farsiman.CertificacionDigital.Dominio.Core.csproj">
+      <Project>{fa365667-2ce9-424a-9092-1e7232d786ac}</Project>
+      <Name>Farsiman.CertificacionDigital.Dominio.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

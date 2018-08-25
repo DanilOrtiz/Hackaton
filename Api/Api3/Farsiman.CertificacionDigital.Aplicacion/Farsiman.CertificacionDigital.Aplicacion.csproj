@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Farsiman.CertificacionDigital.Aplicacion</RootNamespace>
+    <AssemblyName>Farsiman.CertificacionDigital.Aplicacion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\..\Users\mfuentes\Desktop\Librerias\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CertificacionDigital\Dtos\Certificaciones\CertificacionAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Certificaciones\CertificacionCriterioAgregarDTO.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Certificaciones\CertificacionCriterioDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Certificaciones\CertificacionSolicitanteAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Certificaciones\CertificacionSolicitanteDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Certificaciones\CertificacionDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Departamentos\DepartamentoAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Departamentos\DepartamentoDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Departamentos\DepartamentoEditDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Proyecto\ProyectoAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Proyecto\ProyectoCriterioAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Proyecto\ProyectoCriterioDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Proyecto\ProyectoDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Solicitantes\SolicitanteAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Solicitantes\SolicitanteDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Solicitantes\SolicitanteEditDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Sprints\SprintAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Sprints\SprintDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Sprints\SprintEditDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\UENS\UENEditDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\UENS\UENSAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\UENS\UENSDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Usuarios\UsuarioAgregarDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Usuarios\UsuarioConPerilDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Usuarios\UsuarioDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Usuarios\UsuarioEditDto.cs" />
+    <Compile Include="CertificacionDigital\Dtos\Usuarios\UsuarioLoginDto.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\CertificacionSolicitanteService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\CertificacionAplicacionCriteriosService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\CertificacionAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\ICertificacionSolicitanteAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\ICertificacionAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Certificaciones\ICertificacionAplicacionCriterioService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Departamentos\DepartamentoAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Departamentos\IDepartamentoAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Solicitante\ISolicitanteAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Proyectos\IPoyectoAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Proyectos\IProyectoCriterioAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Proyectos\ProyectoAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Proyectos\ProyectoCriterioAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Solicitante\SolicitanteAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Sprint\ISprintAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Sprint\SprintAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\UENS\IUENSAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Usuario\IUsuarioAplicacionService.cs" />
+    <Compile Include="CertificacionDigital\Mapeos\MapeosDto.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Cifrado\CifradoShaServicio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Cifrado\ICifradoServicio.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Login\ILoginServiceAplicacion.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Login\LoginServiceAplicacion.cs" />
+    <Compile Include="CertificacionDigital\Servicios\UENS\UENSAplicacionesService.cs" />
+    <Compile Include="CertificacionDigital\Servicios\Usuario\UsuariosAplicacionesService.cs" />
+    <Compile Include="Hackaton\Dtos\CategoriaDto.cs" />
+    <Compile Include="Hackaton\Dtos\CiudadDto.cs" />
+    <Compile Include="Hackaton\Dtos\EmpresaCategoriaDto.cs" />
+    <Compile Include="Hackaton\Dtos\EmpresaDto.cs" />
+    <Compile Include="Hackaton\Dtos\EstadoDto.cs" />
+    <Compile Include="Hackaton\Dtos\PerfilDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoCategoriaDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoComentarioDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoMultimediaDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoMultimediaTipoDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoValoracionDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoValoracionTipoDto.cs" />
+    <Compile Include="Hackaton\Dtos\UsuarioDto.cs" />
+    <Compile Include="Hackaton\Servicios\HackatonAppService.cs" />
+    <Compile Include="Hackaton\Servicios\HackatonService.cs" />
+    <Compile Include="Hackaton\Servicios\IHackatonService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Hackaton\Mapeos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Aplicacion.Core\Farsiman.CertificacionDigital.Aplicacion.Core.csproj">
+      <Project>{76d285fc-2068-49be-9acb-164291834b7e}</Project>
+      <Name>Farsiman.CertificacionDigital.Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Dominio.Core\Farsiman.CertificacionDigital.Dominio.Core.csproj">
+      <Project>{fa365667-2ce9-424a-9092-1e7232d786ac}</Project>
+      <Name>Farsiman.CertificacionDigital.Dominio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Dominio\Farsiman.CertificacionDigital.Dominio.csproj">
+      <Project>{eba3743a-e963-4e85-a60d-9d7d0ed109cf}</Project>
+      <Name>Farsiman.CertificacionDigital.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
