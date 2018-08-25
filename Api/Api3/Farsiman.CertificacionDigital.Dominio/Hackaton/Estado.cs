@@ -1,4 +1,4 @@
-﻿using Farsiman.CertificacionDigital.Dominio.Core;
+﻿using Hackaton.Dominio.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;

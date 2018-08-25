@@ -1,5 +1,5 @@
-﻿using Farsiman.CertificacionDigital.Dominio.Core;
-using Hackaton.Domain.Entities;
+﻿using Hackaton.Domain.Entities;
+using Hackaton.Dominio.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;

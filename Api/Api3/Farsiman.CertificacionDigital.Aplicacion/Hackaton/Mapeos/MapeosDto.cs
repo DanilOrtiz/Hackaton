@@ -1,18 +1,19 @@
 ﻿using AutoMapper;
+using Farsiman.CertificacionDigital.Aplicacion.Hackaton.Dtos;
 using Hackaton.Application.Dtos;
 using Hackaton.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-
-namespace Hackaton.Application.Mapeos
+using System.Text;
+using System.Threading.Tasks;
+namespace Farsiman.CertificacionDigital.Aplicacion.CertificacionDigital.Mapeos
 {
     public class MapeosDto : Profile
     {
-
         public MapeosDto()
         {
+
             CreateMap<Categoria, CategoriaDto>();
             CreateMap<CategoriaDto, Categoria>();
 
@@ -46,8 +47,15 @@ namespace Hackaton.Application.Mapeos
             CreateMap<SucesoValoracionTipo, SucesoValoracionTipoDto>();
             CreateMap<SucesoValoracionTipoDto, SucesoValoracionTipo>();
 
+            CreateMap<Empresa, EmpresaDto>();
+            CreateMap<EmpresaDto, Empresa>();
+
+            CreateMap<EmpresaCategoria, EmpresaCategoriaDto>();
+            CreateMap<EmpresaCategoriaDto, EmpresaCategoria>();
             CreateMap<Usuario, UsuarioDto>();
             CreateMap<UsuarioDto, Usuario>();
+
+
         }
     }
 }

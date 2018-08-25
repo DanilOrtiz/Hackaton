@@ -41,19 +41,19 @@ namespace Farsiman.CertificacionDigital.Consola
 
         private static void AgregarUsuario()
         {
-            var usuariosServicio = Contenedor.Resolve<IUsuarioAplicacionService>();
-            var usuarionuevo = new UsuarioAgregarDto()
-            {
-                Nombre = "Maynor",
-                Apellido = "Fuentes",
-                Clave = "123",
-                PerfilId = 2,
-                CorreoElectronico = "maynor.fuentes@farsiman.com",
-                CodigoColaborador = 4246
+            //var usuariosServicio = Contenedor.Resolve<IUsuarioAplicacionService>();
+            //var usuarionuevo = new UsuarioAgregarDto()
+            //{
+            //    Nombre = "Maynor",
+            //    Apellido = "Fuentes",
+            //    Clave = "123",
+            //    PerfilId = 2,
+            //    CorreoElectronico = "maynor.fuentes@farsiman.com",
+            //    CodigoColaborador = 4246
 
-            };
+            //};
 
-            usuariosServicio.AgregarUsuario(usuarionuevo);
+            //usuariosServicio.AgregarUsuario(usuarionuevo);
                     
         }
     }

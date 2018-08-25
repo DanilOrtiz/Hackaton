@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Farsiman.CertificacionDigital.Dominio.Core
+namespace Hackaton.Dominio.Core
 {
     public class Entidad
     {

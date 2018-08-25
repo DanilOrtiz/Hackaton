@@ -1,13 +1,13 @@
-﻿using Farsiman.CertificacionDigital.Dominio.Core.Repositorios;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
+using Hackaton.Dominio.Core.Repositorios;
 
-
-namespace Farsiman.CertificacionDigital.Infraestructura.Core
+namespace Hackaton.Infraestructura.Core
 {
     public interface IEntityUnitOfWork: IUnitOfWork
     {

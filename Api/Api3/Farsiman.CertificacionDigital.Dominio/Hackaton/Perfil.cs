@@ -1,4 +1,4 @@
-﻿using Farsiman.CertificacionDigital.Dominio.Core;
+﻿using Hackaton.Dominio.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +9,7 @@ namespace Hackaton.Domain.Entities
     public class Perfil : Entidad
     {
         public string Nombre { get; set; }
-        //public virtual List<Usuario> Usuarios { get; set; }
+        public virtual List<Usuario> Usuarios { get; set; }
 
     }
 }

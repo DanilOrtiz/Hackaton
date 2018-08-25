@@ -1,11 +1,10 @@
-﻿using Farsiman.CertificacionDigital.Infraestructura.CertificacionDigital.Mapeos;
-using Hackaton.Domain.Entities;
+﻿using Hackaton.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Hackaton.Infraestructure.Maps
+namespace Hackaton.Infraestructura.Hackaton.Mapeos
 {
     class SucesoComentarioMap : BaseMap<SucesoComentario>
     {

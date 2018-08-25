@@ -1,10 +1,10 @@
-﻿namespace Farsiman.CertificacionDigital.Infraestructura.Core
+﻿namespace Hackaton.Infraestructura.Core
 {
     using System;
     using System.Data.Entity;
     using System.Linq;
-    using Dominio.Core.Repositorios;
     using System.Data.Entity.Validation;
+    using Dominio.Core.Repositorios;
 
     public class BaseUnitOfWork : DbContext, IEntityUnitOfWork
     {

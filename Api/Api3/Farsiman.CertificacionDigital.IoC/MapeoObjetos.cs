@@ -1,5 +1,5 @@
 ﻿
-namespace Farsiman.CertificacionDigital.IoC
+namespace Hackaton.Aplicacion.IoC
 {
     public static class MapeoObjetos
     {
@@ -7,7 +7,7 @@ namespace Farsiman.CertificacionDigital.IoC
         {
             AutoMapper.Mapper.Initialize(x =>
             {
-                x.AddProfiles("Farsiman.CertificacionDigital.Aplicacion");
+                x.AddProfiles("Hackaton.Aplicacion");
             });
         }
 

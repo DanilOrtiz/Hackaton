@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Linq.Expressions;
 
-namespace Farsiman.CertificacionDigital.Dominio.Core.Repositorios
+namespace Hackaton.Dominio.Core.Repositorios
 {
     public interface IRepositorio<TEntidad>
     {

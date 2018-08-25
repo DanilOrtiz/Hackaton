@@ -1,4 +1,4 @@
-﻿using Farsiman.CertificacionDigital.IoC;
+﻿using Hackaton.Aplicacion.IoC;
 using Hackaton.Application.Services;
 using System;
 using System.Collections.Generic;

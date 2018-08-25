@@ -11,6 +11,16 @@ namespace Farsiman.CertificacionDigital.Aplicacion.Hackaton.Servicios
 {
     public class HackatonAppService : IHackatonService
     {
+        public UsuarioDto AgregarUsuario(UsuarioDto nuevoUsuario)
+        {
+            throw new NotImplementedException();
+        }
+
+        public UsuarioDto EditarUsuario(UsuarioDto usuarioEdit)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<CategoriaDto> ObtenerCategorias()
         {
             throw new NotImplementedException();
@@ -52,6 +62,16 @@ namespace Farsiman.CertificacionDigital.Aplicacion.Hackaton.Servicios
         }
 
         public List<SucesoDto> ObtenerTopDeSucesosMenorDeId(int top, int SucesoId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<UsuarioDto> ObtenerUsuarios()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Credencial ValidarUsuario(Credencial credencial)
         {
             throw new NotImplementedException();
         }

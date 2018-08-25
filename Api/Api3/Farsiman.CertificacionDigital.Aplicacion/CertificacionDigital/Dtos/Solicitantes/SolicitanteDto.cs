@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Farsiman.CertificacionDigital.Dominio.CertificacionDigital.Entidades.Departamentos;
-using Farsiman.CertificacionDigital.Dominio.CertificacionDigital.Entidades.Usuarios;
 
 namespace Farsiman.CertificacionDigital.Aplicacion.CertificacionDigital.Dtos.Solicitantes
 {
@@ -18,7 +17,7 @@ namespace Farsiman.CertificacionDigital.Aplicacion.CertificacionDigital.Dtos.Sol
         public int DepartamentoId { get; set; }
         public int UsuarioId { get; set; }
         public  Departamento Departamento { get; set; }
-        public Usuario Usuario { get; set; }
+        //public Usuario Usuario { get; set; }
         public bool Activo { get; set; }
 
     }

@@ -1,4 +1,4 @@
-﻿using Farsiman.CertificacionDigital.Dominio.Core;
+﻿using Hackaton.Dominio.Core;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +9,8 @@ namespace Hackaton.Domain.Entities
     public class Usuario : Entidad
     {
         public string Nombre { get; set; }
+        public string Apellido { get; set; }
+        public string UsuarioNombre { get; set; }
         public byte[] Clave { get; set; }
         public int CiudadId { get; set; }
         public int PerfilId { get; set; }
@@ -26,7 +28,13 @@ namespace Hackaton.Domain.Entities
         {
             if (string.IsNullOrWhiteSpace(Nombre))
             {
-                mensaje = "El nombre de usuario es necesario.";
+                mensaje = "El nombre es requerido.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(Apellido))
+            {
+                mensaje = "El Apellido es requerido.";
                 return false;
             }
 
@@ -36,7 +44,32 @@ namespace Hackaton.Domain.Entities
                 return false;
             }
 
+            if (string.IsNullOrWhiteSpace(Correo))
+            {
+                mensaje = "El correo electrónico es requerido.";
+                return false;
+            }
+
+            if (string.IsNullOrWhiteSpace(UsuarioNombre))
+            {
+                mensaje = "El nombre de usuario es necesario.";
+                return false;
+            }
+
             return true;
+        }
+
+        public bool EsClaveValida(byte[] claveComparar)
+        {
+            string claveLocal = HasToString(Clave);
+            string claveString = HasToString(claveComparar);
+
+            return claveLocal == claveString;
+        }
+
+        string HasToString(byte[] hash)
+        {
+            return string.Join("", hash.Select(b => b.ToString("x2")).ToArray());
         }
     }
 }

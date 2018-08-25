@@ -1,5 +1,4 @@
-﻿using Farsiman.CertificacionDigital.Dominio.Core;
-using Farsiman.CertificacionDigital.Dominio.Core.Repositorios;
+﻿
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 using System.Linq.Expressions;
+using Hackaton.Dominio.Core;
+using Hackaton.Dominio.Core.Repositorios;
 
-namespace Farsiman.CertificacionDigital.Infraestructura.Core
+namespace Hackaton.Infraestructura.Core
 {
     public class Repositorio<TEntidad> : IRepositorio<TEntidad> where TEntidad: Entidad
     {

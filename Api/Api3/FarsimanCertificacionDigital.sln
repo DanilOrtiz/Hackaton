@@ -13,25 +13,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 Dominio", "4.0 Dominio"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.0 Infraestructura", "5.0 Infraestructura", "{7E1F6870-91E7-403A-ADB9-ECB4843CB3E6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Dominio", "Farsiman.CertificacionDigital.Dominio\Farsiman.CertificacionDigital.Dominio.csproj", "{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Dominio", "Farsiman.CertificacionDigital.Dominio\Hackaton.Dominio.csproj", "{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Dominio.Core", "Farsiman.CertificacionDigital.Dominio.Core\Farsiman.CertificacionDigital.Dominio.Core.csproj", "{FA365667-2CE9-424A-9092-1E7232D786AC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Dominio.Core", "Farsiman.CertificacionDigital.Dominio.Core\Hackaton.Dominio.Core.csproj", "{FA365667-2CE9-424A-9092-1E7232D786AC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Infraestructura", "Farsiman.CertificacionDigital.Infraestructura\Farsiman.CertificacionDigital.Infraestructura.csproj", "{EB0A0B5C-753C-4602-8184-00B727F42EF1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Infraestructura", "Farsiman.CertificacionDigital.Infraestructura\Hackaton.Infraestructura.csproj", "{EB0A0B5C-753C-4602-8184-00B727F42EF1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Infraestructura.Core", "Farsiman.CertificacionDigital.Infraestructura.Core\Farsiman.CertificacionDigital.Infraestructura.Core.csproj", "{BB0B69F4-CBD5-41EE-AA5B-F40185658985}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Infraestructura.Core", "Farsiman.CertificacionDigital.Infraestructura.Core\Hackaton.Infraestructura.Core.csproj", "{BB0B69F4-CBD5-41EE-AA5B-F40185658985}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Aplicacion", "Farsiman.CertificacionDigital.Aplicacion\Farsiman.CertificacionDigital.Aplicacion.csproj", "{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion", "Farsiman.CertificacionDigital.Aplicacion\Hackaton.Aplicacion.csproj", "{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.IoC", "Farsiman.CertificacionDigital.IoC\Farsiman.CertificacionDigital.IoC.csproj", "{5AA60DC3-4580-412B-A15C-68ABC590633C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion.IoC", "Farsiman.CertificacionDigital.IoC\Hackaton.Aplicacion.IoC.csproj", "{5AA60DC3-4580-412B-A15C-68ABC590633C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Aplicacion.Core", "Farsiman.CertificacionDigital.Aplicacion.Core\Farsiman.CertificacionDigital.Aplicacion.Core.csproj", "{76D285FC-2068-49BE-9ACB-164291834B7E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion.Core", "Farsiman.CertificacionDigital.Aplicacion.Core\Hackaton.Aplicacion.Core.csproj", "{76D285FC-2068-49BE-9ACB-164291834B7E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Consola", "Farsiman.CertificacionDigital.Consola\Farsiman.CertificacionDigital.Consola.csproj", "{7D6D32F4-0BE5-44C6-91F9-8CCDAD5669A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Farsiman.CertificacionDigital.Dominio.Test", "Farsiman.CertificacionDigital.Dominio.Test\Farsiman.CertificacionDigital.Dominio.Test.csproj", "{EF7AA82A-BEFD-4EE3-B2C4-819A15D79AFB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,10 +73,6 @@ Global
 		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EF7AA82A-BEFD-4EE3-B2C4-819A15D79AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EF7AA82A-BEFD-4EE3-B2C4-819A15D79AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EF7AA82A-BEFD-4EE3-B2C4-819A15D79AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EF7AA82A-BEFD-4EE3-B2C4-819A15D79AFB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -93,6 +87,5 @@ Global
 		{76D285FC-2068-49BE-9ACB-164291834B7E} = {96F3BD7C-258F-4E1A-86CB-024137201B6E}
 		{7D6D32F4-0BE5-44C6-91F9-8CCDAD5669A4} = {54A908C9-8C12-4768-9902-4D25668C1A28}
 		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D} = {22B93894-B02A-4FD8-8955-6699CD3DCF73}
-		{EF7AA82A-BEFD-4EE3-B2C4-819A15D79AFB} = {F35D0561-ACD5-48C2-A62B-797024804946}
 	EndGlobalSection
 EndGlobal

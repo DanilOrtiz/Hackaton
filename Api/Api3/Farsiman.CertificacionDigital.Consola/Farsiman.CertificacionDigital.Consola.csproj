@@ -57,17 +57,17 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Farsiman.CertificacionDigital.Aplicacion.Core\Farsiman.CertificacionDigital.Aplicacion.Core.csproj">
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Aplicacion.Core\Hackaton.Aplicacion.Core.csproj">
       <Project>{76d285fc-2068-49be-9acb-164291834b7e}</Project>
-      <Name>Farsiman.CertificacionDigital.Aplicacion.Core</Name>
+      <Name>Hackaton.Aplicacion.Core</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Farsiman.CertificacionDigital.Aplicacion\Farsiman.CertificacionDigital.Aplicacion.csproj">
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Aplicacion\Hackaton.Aplicacion.csproj">
       <Project>{2e6a8ab0-b1ce-459f-af9c-01950a934e54}</Project>
-      <Name>Farsiman.CertificacionDigital.Aplicacion</Name>
+      <Name>Hackaton.Aplicacion</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Farsiman.CertificacionDigital.IoC\Farsiman.CertificacionDigital.IoC.csproj">
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.IoC\Hackaton.Aplicacion.IoC.csproj">
       <Project>{5aa60dc3-4580-412b-a15c-68abc590633c}</Project>
-      <Name>Farsiman.CertificacionDigital.IoC</Name>
+      <Name>Hackaton.Aplicacion.IoC</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

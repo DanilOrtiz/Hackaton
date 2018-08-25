@@ -19,5 +19,8 @@ namespace Hackaton.Application.Services
         List<SucesoDto> ObtenerTopDeSucesosMenorDeId(int top,int SucesoId);
         List<EmpresaDto> ObtenerEmpresas();
         List<EmpresaCategoriaDto> ObtenerEmpresasPorCategoria();
+        List<UsuarioDto> ObtenerUsuarios();
+        UsuarioDto AgregarUsuario(UsuarioDto nuevoUsuario);
+        UsuarioDto EditarUsuario(UsuarioDto usuarioEdit);
     }
 }
