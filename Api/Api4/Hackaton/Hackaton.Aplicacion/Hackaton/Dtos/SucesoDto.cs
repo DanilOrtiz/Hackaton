@@ -9,6 +9,7 @@ namespace Hackaton.Application.Dtos
 {
     public class SucesoDto : BaseDto<SucesoDto>
     {
+        public int Id { get; set; }
         public int UsuarioId { get; set; }
         public string Descripcion { get; set; }
         public string Latitud { get; set; }

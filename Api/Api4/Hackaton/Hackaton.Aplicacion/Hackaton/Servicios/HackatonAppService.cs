@@ -71,10 +71,10 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
                     return suceso;
                 }
                 suceso.EstadoId = EnumEstados.Nuevo;
-                
+
                 Suceso sucesoEntidad = AutoMapper.Mapper.Map<Suceso>(suceso);
                 _sucesoRepositorio.Agregar(sucesoEntidad);
-                _sucesoRepositorio.UnitOfWork.SaveChanges();                    
+                _sucesoRepositorio.UnitOfWork.SaveChanges();
                 suceso.RespuestaTipo = RespuestaTipo.Ok;
                 return suceso;
             }
@@ -92,8 +92,9 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
         {
             suceso.RespuestaTipo = RespuestaTipo.Ok;
 
-            if (suceso == null) {
-                suceso  = new SucesoDto()
+            if (suceso == null)
+            {
+                suceso = new SucesoDto()
                 {
                     Respuesta = "No se encontró información!",
                     RespuestaTipo = RespuestaTipo.Validacion
@@ -142,7 +143,8 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
                 suceso.Respuesta = "Ciudad inválida!";
                 suceso.RespuestaTipo = RespuestaTipo.Validacion;
             }
-            if (String.IsNullOrEmpty(suceso.Descripcion)) {
+            if (String.IsNullOrEmpty(suceso.Descripcion))
+            {
                 suceso.Respuesta = "Se necesita una descripción del suceso!";
                 suceso.RespuestaTipo = RespuestaTipo.Validacion;
             }
@@ -165,6 +167,74 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
             }
 
             return suceso;
+        }
+
+        public SucesoDto AnularSuceso(SucesoDto suceso)
+        {
+            try
+            {
+                if (suceso == null)
+                {
+                    return new SucesoDto() { Respuesta = "No se encontró información!", RespuestaTipo = RespuestaTipo.Validacion };
+                }
+
+                if (suceso.ID == 0)
+                {
+                    return new SucesoDto() { Respuesta = "No se encontró la noticia para poder anular!", RespuestaTipo = RespuestaTipo.Validacion };
+                }
+
+                Suceso sucesoPorId = _sucesoRepositorio.ObtenerPorID(suceso.ID);
+
+                if (sucesoPorId == null)
+                {
+                    return new SucesoDto() { Respuesta = "No se encontró información!", RespuestaTipo = RespuestaTipo.Validacion };
+                }
+
+                sucesoPorId.EstadoId = (int)EnumEstados.AnuladoPorUsuario;
+                _sucesoRepositorio.UnitOfWork.SaveChanges();
+
+                return AutoMapper.Mapper.Map<SucesoDto>(sucesoPorId);
+            }
+            catch (Exception ex)
+            {
+                return new SucesoDto() { Respuesta = "No se encontró información!", RespuestaTipo = RespuestaTipo.Validacion };
+            }
+
+        }
+
+
+        public SucesoDto ValorarSuceso(int sucesoId, int valoracion)
+        {
+            try
+            {
+                if (sucesoId == 0 || valoracion == 0)
+                {
+                    return new SucesoDto() { Respuesta = "No se encontró información!", RespuestaTipo = RespuestaTipo.Validacion };
+                }
+
+                Suceso resultadoInfo = _sucesoRepositorio.FirstOrDefault(x => x.Id == sucesoId);
+
+                if (resultadoInfo == null)
+                {
+                    return new SucesoDto() { Respuesta = "No se encontró información!", RespuestaTipo = RespuestaTipo.Validacion };
+                }
+
+                var valorar = new SucesoValoracion()
+                {
+                    SucesoId = sucesoId,
+                    SucesoValoracionId = valoracion
+                };
+
+                _sucesoValoracionRepositorio.Agregar(valorar);
+                _sucesoRepositorio.UnitOfWork.SaveChanges();
+
+
+            }
+            catch (Exception ex)
+            {
+                return new SucesoDto() { Respuesta = "No se encontró información!", RespuestaTipo = RespuestaTipo.Validacion };
+            }
+
         }
     }
 }
