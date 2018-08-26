@@ -221,5 +221,11 @@ namespace Hackaton.Application.Services
 
             return AutoMapper.Mapper.Map<List<SucesoDto>>(sucesos);
         }
+
+        public UsuarioDto ObtenerUsuarioPorId(int usuarioID)
+        {
+            var resultado = _sucesoRepositorio.ObtenerPorID(usuarioID);
+            return AutoMapper.Mapper.Map<UsuarioDto>(resultado);
+        }
     }
 }

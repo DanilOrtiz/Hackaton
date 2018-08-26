@@ -33,6 +33,13 @@ namespace WebApplication1.Controllers
             loginAppService.SonCredencialesValidas(credenciales);
             return Ok(credenciales);
         }
+        [HttpGet]
+        [Route("UsuarioPorId/{usuarioID}")]
+        public IHttpActionResult ValidarCredenciales(int usuarioID)
+        {
+            var resultado = hackatonService.ObtenerUsuarioPorId(usuarioID);
+            return Ok(resultado);
+        }
 
     }
 }
