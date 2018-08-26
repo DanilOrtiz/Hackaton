@@ -1,4 +1,5 @@
 ﻿using Hackaton.Aplicacion.Core;
+using Hackaton.Aplicacion.Hackaton.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Hackaton.Application.Dtos
         public string Longitud { get; set; }
         public bool EsAnonimo { get; set; }
         public int CiudadId { get; set; }
-        public int EstadoId { get; set; }
+        public EnumEstados EstadoId { get; set; }
         public virtual UsuarioDto Usuario { get; set; }
         public virtual CiudadDto Ciudad { get; set; }
         public virtual List<SucesoCategoriaDto> SucesoCategorias { get; set; }

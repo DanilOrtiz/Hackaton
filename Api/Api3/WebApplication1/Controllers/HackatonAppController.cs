@@ -1,5 +1,7 @@
-﻿using Hackaton.Aplicacion.Hackaton.Servicios;
+﻿using Hackaton.Aplicacion.Core;
+using Hackaton.Aplicacion.Hackaton.Servicios;
 using Hackaton.Aplicacion.IoC;
+using Hackaton.Application.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,6 +44,15 @@ namespace WebApplication1.Controllers
         public IHttpActionResult ObtenerSucesos()
         {
             var resultado = hackatonService.ObtenerSucesos();
+            return Ok(resultado);
+        }
+
+        [HttpPost, Route("crearsuceso")]
+        public IHttpActionResult InsertarSuceso([FromBody]SucesoDto suceso)
+        {
+            var resultado = hackatonService.CrearSuceso(suceso);
+            if (resultado.RespuestaTipo != RespuestaTipo.Ok)
+                return BadRequest(resultado.Respuesta);
             return Ok(resultado);
         }
     }

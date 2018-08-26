@@ -63,6 +63,9 @@
     <Compile Include="Hackaton\Dtos\Credencial.cs" />
     <Compile Include="Hackaton\Dtos\EmpresaCategoriaDto.cs" />
     <Compile Include="Hackaton\Dtos\EmpresaDto.cs" />
+    <Compile Include="Hackaton\Dtos\EnumEstados.cs" />
+    <Compile Include="Hackaton\Dtos\EnumMultimediaTipo.cs" />
+    <Compile Include="Hackaton\Dtos\EnumValoracionTipo.cs" />
     <Compile Include="Hackaton\Dtos\EstadoDto.cs" />
     <Compile Include="Hackaton\Dtos\PerfilDto.cs" />
     <Compile Include="Hackaton\Dtos\SucesoCategoriaDto.cs" />

@@ -4,9 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Farsiman.CertificacionDigital.Aplicacion.Hackaton.Dtos;
 using Hackaton.Application.Dtos;
 using Hackaton.Domain.Entities;
+using Hackaton.Aplicacion.Hackaton.Dtos;
 using Hackaton.Dominio.Core.Repositorios;
+using Hackaton.Aplicacion.Core;
 
 namespace Hackaton.Aplicacion.Hackaton.Servicios
 {
@@ -54,6 +57,114 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
         public List<SucesoValoracionDto> ObtenerSucesosValoracion()
         {
             return AutoMapper.Mapper.Map<List<SucesoValoracionDto>>(_sucesoValoracionRepositorio.ObtenerTodos());
+        }
+
+        public SucesoDto CrearSuceso(SucesoDto suceso)
+        {
+            try
+            {
+                RespuestaTipo respuestaValidaciones = RespuestaTipo.Ok;
+                String mensajeError = string.Empty;
+                suceso = ValidarPropiedadesDeSuceso(suceso);
+                if (suceso.RespuestaTipo != RespuestaTipo.Ok)
+                {
+                    return suceso;
+                }
+                suceso.EstadoId = EnumEstados.Nuevo;
+                
+                Suceso sucesoEntidad = AutoMapper.Mapper.Map<Suceso>(suceso);
+                _sucesoRepositorio.Agregar(sucesoEntidad);
+                _sucesoRepositorio.UnitOfWork.SaveChanges();                    
+                suceso.RespuestaTipo = RespuestaTipo.Ok;
+                return suceso;
+            }
+            catch (Exception ex)
+            {
+                return new SucesoDto()
+                {
+                    Respuesta = "Lo sentimos se presentó un incoveniente al crear su noticia!",
+                    RespuestaTipo = RespuestaTipo.Excepcion
+                };
+            }
+        }
+
+        private SucesoDto ValidarPropiedadesDeSuceso(SucesoDto suceso)
+        {
+            suceso.RespuestaTipo = RespuestaTipo.Ok;
+
+            if (suceso == null) {
+                suceso  = new SucesoDto()
+                {
+                    Respuesta = "No se encontró información!",
+                    RespuestaTipo = RespuestaTipo.Validacion
+                };
+                return suceso;
+            }
+            if (suceso.SucesosMultimedia == null)
+            {
+                return new SucesoDto()
+                {
+                    Respuesta = "Favor ingrese un archivo multimedia para detallar mas su noticia!",
+                    RespuestaTipo = RespuestaTipo.Validacion
+                };
+            }
+            if (suceso.SucesoCategorias == null)
+            {
+                return new SucesoDto()
+                {
+                    Respuesta = "Favor detalle la categoría de su noticia!",
+                    RespuestaTipo = RespuestaTipo.Validacion
+                };
+            }
+            suceso.SucesosMultimedia.ForEach(data =>
+            {
+                if (String.IsNullOrEmpty(data.Ruta))
+                {
+                    suceso.Respuesta = "La ruta del archivo es inválida!";
+                    suceso.RespuestaTipo = RespuestaTipo.Validacion;
+                }
+                if (string.IsNullOrEmpty(data.Nombre))
+                {
+                    suceso.Respuesta = "Nombre del archivo inválido!";
+                    suceso.RespuestaTipo = RespuestaTipo.Validacion;
+                }
+            });
+            suceso.SucesoCategorias.ForEach(data =>
+            {
+                if (data.CategoriaId == 0)
+                {
+                    suceso.Respuesta = "Categoría inválida!";
+                    suceso.RespuestaTipo = RespuestaTipo.Validacion;
+                }
+            });
+            if (suceso.CiudadId == 0)
+            {
+                suceso.Respuesta = "Ciudad inválida!";
+                suceso.RespuestaTipo = RespuestaTipo.Validacion;
+            }
+            if (String.IsNullOrEmpty(suceso.Descripcion)) {
+                suceso.Respuesta = "Se necesita una descripción del suceso!";
+                suceso.RespuestaTipo = RespuestaTipo.Validacion;
+            }
+
+            if (string.IsNullOrEmpty(suceso.Latitud))
+            {
+                suceso.Respuesta = "Latitud no reconocida!";
+                suceso.RespuestaTipo = RespuestaTipo.Validacion;
+            }
+
+            if (string.IsNullOrEmpty(suceso.Longitud))
+            {
+                suceso.Respuesta = "Longitud no reconocida!";
+                suceso.RespuestaTipo = RespuestaTipo.Validacion;
+            }
+            if (suceso.EsAnonimo == false && suceso.UsuarioId == 0)
+            {
+                suceso.Respuesta = "Ocurrio un problema con el usuario logueado intente de nuevo o mas tarde!";
+                suceso.RespuestaTipo = RespuestaTipo.Validacion;
+            }
+
+            return suceso;
         }
     }
 }
