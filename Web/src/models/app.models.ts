@@ -9,6 +9,8 @@ export class Ciudad {
 export class Usuario {
     constructor(
        public nombre: string = "",
+       public apellido: string = "",
+       public usuarioNombre: string = "",
        public clave: string = "",
        public ciudadId: number = 0,
        public ciudad: Ciudad = new Ciudad(),
@@ -45,6 +47,7 @@ export class Empresa {
 }
 export class Suceso {
     constructor(
+      public id: number = 0,
       public usuarioId: number=0,
       public descripcion: string="",
       public latitud: string="",
@@ -56,10 +59,13 @@ export class Suceso {
       public usuario:Usuario = new Usuario,
       public ciudad:Ciudad = new Ciudad,
       public sucesoCategoria: SucesoCategoria[] = null,
-      public sucesoComentario: SucesoComentario[] = null,
+      public sucesoComentarios: SucesoComentario[] = null,
       public sucesoMultimedia: SucesoMultimedia[] = null,
       public sucesoValoracion: SucesoValoracion[] = null,
       public estado:Estado = new Estado,
+      public fechaAgrega: Date = new Date,
+      public cantidadComentarios: number = 0,
+      public mostrarComentarios: boolean = false,
     )
     {}
 }
@@ -75,12 +81,7 @@ export enum TipoEstados {
     Nueva = 1,
     Eliminada = 2
 }
-export class Categoria {
-    constructor(
-        public nombre: string = ""
-        )
-    {}
-}
+
 export class Perfil {
     constructor(
         public nombre: string = "")
@@ -100,7 +101,8 @@ export class SucesoComentario {
       public comentario: string = "",
       public usuarioId:number=0,
       public suceso: Suceso=new Suceso,
-      public usuario: Usuario=new Usuario
+      public usuario: Usuario=new Usuario,
+      public fechaAgrega: Date = new Date,
       )
       {}
     }
@@ -140,4 +142,12 @@ export class SucesoValoracionTipo {
       public sucesoValoracion: SucesoValoracion[] = null
       )
       {}
+}
+
+export class Categoria {
+    constructor(
+        public nombre: string = "",
+        public ImagenUrl: string = "",
+        )
+    {}
 }

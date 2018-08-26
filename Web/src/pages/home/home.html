@@ -20,30 +20,35 @@
 
   <!-- Story line -->
   <ion-scroll class="story" scrollX="true">
-    <div class="story_scroll" *ngFor="let s of stories">
-     <ion-card>
-      <img [src]="s.img"/>
-      <div class="card-title">{{ s.user_name }}</div>
-    </ion-card>
-
+    <div class="story_scroll" *ngFor="let s of categorias">
+      <div class="story_img_bg">
+      <ion-card >
+        <img class="story_img" [src]="s.imagenUrl" style="width: 80px; height: 50px"/>
+        <div class="story_text" style="width: 80px; height: 50px">{{ s.nombre }}</div>
+      </ion-card>
     </div>
+    </div> 
   </ion-scroll>
-
+ 
+  
   <hr no-margin no-padding>
-  <div (swipe)="swipePage($event)">
+  <div *ngFor="let suceso of sucesos">
 
     <!-- Cards -->
     <ion-card no-padding padding-bottom no-margin>
-
       <ion-row>
         <ion-col col-10>
           <ion-item>
         <ion-avatar item-left>
-          <img src="http://ionicframework.com/dist/preview-app/www/assets/img/sarah-avatar.png.jpeg">
+          <img [src]="suceso.usuario.imagenUrl">
         </ion-avatar>
-        <h2 style="font-weight: bold">ashleyosama</h2>
-        <p>Cyprus</p>
-        
+        <ion-avatar item-left>
+        <h2 text-left style="font-weight: bold; color:black !important">{{suceso.usuario.usuarioNombre}}</h2>  
+        <ion-note text-left style="font-size: 12px">
+          {{suceso.fechaAgrega}}
+        </ion-note>
+      </ion-avatar>
+
       </ion-item>
         </ion-col >
         <ion-col col-2>
@@ -51,34 +56,91 @@
             <ion-icon name="more"></ion-icon>
         </button>
         </ion-col>
-      </ion-row>
-      
 
-      <img src="http://ionicframework.com/dist/preview-app/www/assets/img/advance-card-bttf.png" (tap)="tapPhotoLike($event)">
+        <ion-col col-12>
+          <div class="row carousel-holder">
+            <div class="col-md-12">
+              <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                        <li data-target="#carousel-example-generic" data-slide-to="0" class="active" ></li>
+                        <li data-target="#carousel-example-generic" data-slide-to="1" ></li>
+                  </ol>
+                  <div class="carousel-inner" *ngFor="let multimedia of suceso.sucesosMultimedia;let i = index">                   
+                      <div class="item" [class.active]="i==0">
+                            <img class="slide-image" [src]="multimedia.ruta" (tap)="tapPhotoLike($event)">
+                     </div>   
+                     
+                     <div class="item">
+                        <img class="slide-image" [src]="multimedia.ruta" (tap)="tapPhotoLike($event)">
+                    </div>
+                </div>
+
+                  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                  </a>
+              </div>
+          </div>
+            </div>
+        </ion-col>
+      </ion-row>
 
       <p no-margin no-padding>
-        <button clear ion-button icon-only (click)="likeButton()" class="like-btn">
-          <ion-icon no-padding [name]="like_btn.icon_name" color="{{ like_btn.color }}" class="icon-space"></ion-icon>
-        </button>
-        <button clear ion-button icon-only>
-          <ion-icon no-padding isActive="false" color="black" name="ios-text-outline" class="icon-space" style="font-weight: bold"></ion-icon>
-        </button>
-        <button no-margin no-padding clear color="black" ion-button icon-only style="float: right">
-          <ion-icon name="ios-bookmark-outline"></ion-icon>
-        </button>
+        <ion-fab>
+            <button ion-fab mini style="background-color: transparent; box-shadow: none; " class="like-btn">
+                <img src="assets/icon/like.png" width="15px" height="25px">
+            </button>
+            <ion-fab-list side="top">
+                <button ion-fab (click)="InsertarValoracion(1,suceso.id)">
+                  <img src="assets/icon/like.png">
+                </button>
+                <button ion-fab (click)="InsertarValoracion(2,suceso.id)">
+                    <img src="assets/icon/sad.png">
+                </button>
+                <button ion-fab (click)="InsertarValoracion(3,suceso.id)">
+                    <img src="assets/icon/angry.png">
+                </button>
+                <button ion-fab (click)="InsertarValoracion(4,suceso.id)">
+                    <img src="assets/icon/confused.png">
+                </button>
+              </ion-fab-list>
+          </ion-fab>    
       </p>
       <hr>
 
       <ion-card-content>
         <p class="like-content"><ion-icon name="heart"></ion-icon> 250 likes</p>
-        <p><b>techcrunch</b> Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
-      
-        <ion-note style="font-size: 12px">
-          11h ago
-        </ion-note>
-      </ion-card-content>
+        <p><b>{{suceso.descripcion}}</b></p>
+      </ion-card-content>  
+
+      <ion-col>
+          <button ion-button color="primary" clear small icon-start onclick="mostrarComentarios(suceso.id)">
+            <ion-icon name='text'></ion-icon>
+            {{suceso.cantidadComentarios}} Commentarios
+          </button>
+        </ion-col>
+
+        <div *ngIf="suceso.mostrarComentarios">
+        <ion-list *ngFor="let comentario of suceso.sucesoComentario">
+            <ion-item >
+              <ion-avatar item-start>
+                <img [src]="comentario.usuario.imagenUrl">
+              </ion-avatar>
+            <ion-avatar item-left>
+              <h5 text-left style="font-weight: bold; color:black !important">{{comentario.usuario.usuarioNombre}}</h5>
+              <ion-note text-left style="font-size: 12px">
+                  {{comentario.fechaAgrega}}
+                </ion-note>
+              <p>{{comentario.comentario}}</p>
+            </ion-avatar>              
+            </ion-item>
+          </ion-list>
+        </div>
 
     </ion-card>
 
+    
   </div>
 </ion-content>

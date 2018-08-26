@@ -10,5 +10,6 @@ namespace Hackaton.Application.Dtos
     {
         public string Nombre { get; set; }
         public DateTime FechaAgrega { get; set; }
+        public string ImagenUrl { get; set; }
     }
 }

@@ -178,12 +178,12 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
                     return new SucesoDto() { Respuesta = "No se encontró información!", RespuestaTipo = RespuestaTipo.Validacion };
                 }
 
-                if (suceso.ID == 0)
+                if (suceso.Id == 0)
                 {
                     return new SucesoDto() { Respuesta = "No se encontró la noticia para poder anular!", RespuestaTipo = RespuestaTipo.Validacion };
                 }
 
-                Suceso sucesoPorId = _sucesoRepositorio.ObtenerPorID(suceso.ID);
+                Suceso sucesoPorId = _sucesoRepositorio.ObtenerPorID(suceso.Id);
 
                 if (sucesoPorId == null)
                 {
@@ -228,7 +228,7 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
                 _sucesoValoracionRepositorio.Agregar(valorar);
                 _sucesoRepositorio.UnitOfWork.SaveChanges();
 
-
+                return new SucesoDto() { Respuesta = "Ok", RespuestaTipo = RespuestaTipo.Ok };
             }
             catch (Exception ex)
             {

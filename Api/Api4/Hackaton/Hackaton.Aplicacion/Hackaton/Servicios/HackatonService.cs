@@ -24,9 +24,8 @@ namespace Hackaton.Application.Services
         private readonly IRepositorio<SucesoCategoria> _sucesoCategoriaRepositorio;
         private readonly ICifradoServicio _cigradoAplicacionServicio;
 
-
         public HackatonService(IRepositorio<Ciudad> ciudadRepositorio
-            ,IRepositorio<Categoria> categoriaRepositorio
+            , IRepositorio<Categoria> categoriaRepositorio
             , IRepositorio<Empresa> empresaRepositorio
             , IRepositorio<EmpresaCategoria> empresaCategoriaRepositorio
             , IRepositorio<Estado> estadoRepositorio
@@ -69,7 +68,14 @@ namespace Hackaton.Application.Services
 
         public List<SucesoDto> ObtenerTopDeSucesos(int top)
         {
-            var sucesos = _sucesoRepositorio.AsQueryable().ToList().Take(top).OrderByDescending(o => o.FechaAgrega);
+            var sucesos = _sucesoRepositorio.AsQueryable().ToList().Take(top).OrderByDescending(o => o.FechaAgrega).ToList();
+
+            sucesos.ForEach(delegate (Suceso suceso)
+            {
+                suceso.Usuario = _usuarioRepositorio.FirstOrDefault(u => u.Id == suceso.UsuarioId);
+            });
+
+
             return AutoMapper.Mapper.Map<List<SucesoDto>>(sucesos);
         }
 
@@ -79,7 +85,13 @@ namespace Hackaton.Application.Services
                 Where(s => s.Id < SucesoId)
                 .ToList()
                 .Take(top)
-                .OrderByDescending(o => o.FechaAgrega);
+                .OrderByDescending(o => o.FechaAgrega).ToList();
+
+            sucesos.ForEach(delegate (Suceso suceso)
+            {
+                suceso.Usuario = _usuarioRepositorio.FirstOrDefault(u => u.Id == suceso.UsuarioId);
+            });
+
             return AutoMapper.Mapper.Map<List<SucesoDto>>(sucesos);
         }
 
@@ -106,7 +118,7 @@ namespace Hackaton.Application.Services
             usuario.Clave = _cigradoAplicacionServicio.Cifrar(nuevoUsuario.ClaveNormal);
 
             string mensaje = "";
-            if (! usuario.EsValido(ref mensaje))
+            if (!usuario.EsValido(ref mensaje))
             {
                 nuevoUsuario.Respuesta = mensaje;
                 nuevoUsuario.RespuestaTipo = RespuestaTipo.Validacion;
@@ -163,29 +175,49 @@ namespace Hackaton.Application.Services
                            join s in _sucesoRepositorio.ObtenerTodos() on sc.SucesoId equals s.Id
                            select s).ToList();
 
+            sucesos.ForEach(delegate (Suceso suceso)
+            {
+                suceso.Usuario = _usuarioRepositorio.FirstOrDefault(u => u.Id == suceso.UsuarioId);
+            });
+
             return AutoMapper.Mapper.Map<List<SucesoDto>>(sucesos);
         }
 
         public List<SucesoDto> ObtenerSucesosPorUsuario(int usuarioId)
         {
             var sucesos = _sucesoRepositorio.AsQueryable().Where(s => s.UsuarioId == usuarioId).ToList();
+
+            sucesos.ForEach(delegate (Suceso suceso)
+            {
+                suceso.Usuario = _usuarioRepositorio.FirstOrDefault(u => u.Id == suceso.UsuarioId);
+            });
+
             return AutoMapper.Mapper.Map<List<SucesoDto>>(sucesos);
         }
 
         public SucesoDto ObtenerSucesoPorId(int sucesoId)
         {
-            return AutoMapper.Mapper.Map<SucesoDto>(_sucesoRepositorio.ObtenerPorID(sucesoId));
+            var suceso = _sucesoRepositorio.ObtenerPorID(sucesoId);
+            suceso.Usuario = _usuarioRepositorio.FirstOrDefault(u => u.Id == suceso.UsuarioId);
+            return AutoMapper.Mapper.Map<SucesoDto>(suceso);
         }
 
         public List<SucesoDto> ObtenerSucesosPorEmpresa(int empresaId)
         {
             var categorias = _empresaCategoriaRepositorio.AsQueryable().Where(c => c.EmpresaID == empresaId).ToList();
-            var categoriasSucesos = (from c in categorias join sc in _sucesoCategoriaRepositorio.ObtenerTodos()
-                                     on c.CategoriaID equals sc.Id select sc).ToList();
+            var categoriasSucesos = (from c in categorias
+                                     join sc in _sucesoCategoriaRepositorio.ObtenerTodos()
+                on c.CategoriaID equals sc.Id
+                                     select sc).ToList();
 
             var sucesos = (from sc in categoriasSucesos
                            join s in _sucesoRepositorio.ObtenerTodos() on sc.SucesoId equals s.Id
                            select s).ToList();
+
+            sucesos.ForEach(delegate (Suceso suceso)
+            {
+                suceso.Usuario = _usuarioRepositorio.FirstOrDefault(u => u.Id == suceso.UsuarioId);
+            });
 
             return AutoMapper.Mapper.Map<List<SucesoDto>>(sucesos);
         }

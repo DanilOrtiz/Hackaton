@@ -15,7 +15,7 @@ namespace Hackaton.Domain.Entities
         public bool EsAnonimo { get; set; }
         public int CiudadId { get; set; }
         public int EstadoId { get; set; }
-        //public virtual Usuario Usuario { get; set; }
+        public virtual Usuario Usuario { get; set; }
         public virtual Ciudad Ciudad { get; set; }
         public virtual List<SucesoCategoria> SucesoCategorias { get; set; }
         public virtual List<SucesoComentario> SucesoComentarios { get; set; }

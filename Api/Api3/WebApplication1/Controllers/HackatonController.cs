@@ -64,8 +64,8 @@ namespace WebApplication1.Controllers
             return Ok(perfiles);
         }
 
-        [HttpPost]
-        [Route("ObtenerTopDeSuceso")]
+        [HttpGet]
+        [Route("ObtenerTopDeSuceso/{top}")]
         public IHttpActionResult ObtenerTopDeSuceso(int top)
         {
             var sucesos = hackatonService.ObtenerTopDeSucesos(top);
@@ -73,7 +73,7 @@ namespace WebApplication1.Controllers
         }
 
         [Route("ObtenerTopDeSucesosMenorDeId/{top}/{sucesoId}")]
-        [HttpPost]
+        [HttpGet]
         public IHttpActionResult ObtenerTopDeSucesosMenorDeId(int top, int sucesoId)
         {
             var sucesos = hackatonService.ObtenerTopDeSucesosMenorDeId(top, sucesoId);
