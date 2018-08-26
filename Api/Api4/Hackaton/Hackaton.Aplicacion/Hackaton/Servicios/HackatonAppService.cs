@@ -41,7 +41,12 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
 
         public List<SucesoDto> ObtenerSucesos()
         {
-            return AutoMapper.Mapper.Map<List<SucesoDto>>(_sucesoRepositorio.ObtenerTodos());
+            var resultado = AutoMapper.Mapper.Map<List<SucesoDto>>(_sucesoRepositorio.ObtenerTodos());
+            resultado.ForEach(data =>
+            {
+                data.FechaAgrega = data.FechaAgrega.Date;
+            });
+            return resultado;
         }
 
         public List<SucesoComentarioDto> ObtenerSucesosComentarios()
