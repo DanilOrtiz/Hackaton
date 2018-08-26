@@ -1,0 +1,84 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.0 Presentacion", "1.0 Presentacion", "{54A908C9-8C12-4768-9902-4D25668C1A28}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.0 Servicios Distribuidos", "2.0 Servicios Distribuidos", "{22B93894-B02A-4FD8-8955-6699CD3DCF73}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.0 Aplicacion", "3.0 Aplicacion", "{96F3BD7C-258F-4E1A-86CB-024137201B6E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.0 Dominio", "4.0 Dominio", "{F35D0561-ACD5-48C2-A62B-797024804946}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.0 Infraestructura", "5.0 Infraestructura", "{7E1F6870-91E7-403A-ADB9-ECB4843CB3E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Dominio", "Farsiman.CertificacionDigital.Dominio\Hackaton.Dominio.csproj", "{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Dominio.Core", "Farsiman.CertificacionDigital.Dominio.Core\Hackaton.Dominio.Core.csproj", "{FA365667-2CE9-424A-9092-1E7232D786AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Infraestructura", "Farsiman.CertificacionDigital.Infraestructura\Hackaton.Infraestructura.csproj", "{EB0A0B5C-753C-4602-8184-00B727F42EF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Infraestructura.Core", "Farsiman.CertificacionDigital.Infraestructura.Core\Hackaton.Infraestructura.Core.csproj", "{BB0B69F4-CBD5-41EE-AA5B-F40185658985}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion", "Farsiman.CertificacionDigital.Aplicacion\Hackaton.Aplicacion.csproj", "{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion.IoC", "Farsiman.CertificacionDigital.IoC\Hackaton.Aplicacion.IoC.csproj", "{5AA60DC3-4580-412B-A15C-68ABC590633C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hackaton.Aplicacion.Core", "Farsiman.CertificacionDigital.Aplicacion.Core\Hackaton.Aplicacion.Core.csproj", "{76D285FC-2068-49BE-9ACB-164291834B7E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication1", "WebApplication1\WebApplication1.csproj", "{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBA3743A-E963-4E85-A60D-9D7D0ED109CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA365667-2CE9-424A-9092-1E7232D786AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA365667-2CE9-424A-9092-1E7232D786AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA365667-2CE9-424A-9092-1E7232D786AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA365667-2CE9-424A-9092-1E7232D786AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB0A0B5C-753C-4602-8184-00B727F42EF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB0A0B5C-753C-4602-8184-00B727F42EF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB0A0B5C-753C-4602-8184-00B727F42EF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB0A0B5C-753C-4602-8184-00B727F42EF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB0B69F4-CBD5-41EE-AA5B-F40185658985}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB0B69F4-CBD5-41EE-AA5B-F40185658985}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB0B69F4-CBD5-41EE-AA5B-F40185658985}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB0B69F4-CBD5-41EE-AA5B-F40185658985}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AA60DC3-4580-412B-A15C-68ABC590633C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA60DC3-4580-412B-A15C-68ABC590633C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA60DC3-4580-412B-A15C-68ABC590633C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AA60DC3-4580-412B-A15C-68ABC590633C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76D285FC-2068-49BE-9ACB-164291834B7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D285FC-2068-49BE-9ACB-164291834B7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D285FC-2068-49BE-9ACB-164291834B7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D285FC-2068-49BE-9ACB-164291834B7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{EBA3743A-E963-4E85-A60D-9D7D0ED109CF} = {F35D0561-ACD5-48C2-A62B-797024804946}
+		{FA365667-2CE9-424A-9092-1E7232D786AC} = {F35D0561-ACD5-48C2-A62B-797024804946}
+		{EB0A0B5C-753C-4602-8184-00B727F42EF1} = {7E1F6870-91E7-403A-ADB9-ECB4843CB3E6}
+		{BB0B69F4-CBD5-41EE-AA5B-F40185658985} = {7E1F6870-91E7-403A-ADB9-ECB4843CB3E6}
+		{2E6A8AB0-B1CE-459F-AF9C-01950A934E54} = {96F3BD7C-258F-4E1A-86CB-024137201B6E}
+		{5AA60DC3-4580-412B-A15C-68ABC590633C} = {96F3BD7C-258F-4E1A-86CB-024137201B6E}
+		{76D285FC-2068-49BE-9ACB-164291834B7E} = {96F3BD7C-258F-4E1A-86CB-024137201B6E}
+		{78CC9AAF-0874-4CBC-ACE7-E1D88599A15D} = {22B93894-B02A-4FD8-8955-6699CD3DCF73}
+	EndGlobalSection
+EndGlobal

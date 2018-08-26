@@ -25,5 +25,6 @@ namespace Hackaton.Application.Services
         List<SucesoDto> ObtenerSucesosPorUsuario(int usuarioId);
         SucesoDto ObtenerSucesoPorId(int sucesoId);
         List<SucesoDto> ObtenerSucesosPorEmpresa(int empresaId);
+        UsuarioDto ObtenerUsuarioPorId(int usuarioID);
     }
 }
