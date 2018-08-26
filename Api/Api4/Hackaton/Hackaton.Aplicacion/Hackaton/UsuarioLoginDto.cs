@@ -9,6 +9,7 @@ namespace Hackaton.Aplicacion.Hackaton.Dtos.Usuarios
 {
     public class UsuarioLoginDto: BaseDto<UsuarioLoginDto>
     {
+        public int UsuarioId { get; set; }
         public string Correo { get; set; }
         public string Clave { get; set; }
 

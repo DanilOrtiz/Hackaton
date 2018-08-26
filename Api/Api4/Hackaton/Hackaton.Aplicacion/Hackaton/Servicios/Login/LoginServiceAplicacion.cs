@@ -44,6 +44,7 @@ namespace Farsiman.CertificacionDigital.Aplicacion.CertificacionDigital.Servicio
                 return;
             }
 
+            credenciales.UsuarioId = usuario.Id;
             credenciales.Respuesta = "Bienvenido..!";
             credenciales.RespuestaTipo = RespuestaTipo.Ok;
         }

@@ -30,6 +30,11 @@ export class AppService {
     return this.http.get(uri).map(data => data.json() as Suceso[]);
   }
 
+  ObtenerSucesosPorUsuario(usuarioID:number):Observable<Suceso[]>{
+    let uri = this.Url + "ObtenerSucesosPorUsuario/" +usuarioID;
+    return this.http.get(uri).map(data => data.json() as Suceso[]); 
+  }
+
   ObtenerTopSucesosMenorDeID(sucesoId: number) : Observable<Suceso[]>
   {
     let uri = this.Url + "ObtenerTopDeSucesosMenorDeId/5/" + sucesoId;

@@ -69,7 +69,6 @@ export class Home {
     this.appService.ObtenerTopSuceso().subscribe(data => {
       this.sucesos = data;
       
-
       this.sucesos.forEach(suceso => {
         if (suceso.sucesoComentarios == null)
         {
@@ -89,6 +88,7 @@ export class Home {
           suceso.usuario.apellido = "Anonimo";
         }
 
+        console.log(this.sucesos);
       });
 
     }, error => {
@@ -142,6 +142,12 @@ export class Home {
   InsertarValoracion(valoracionId: any,sucesoId: any)
   {
     this.appService.InsertarValoracion(valoracionId,sucesoId,1).subscribe(data => {
+      let alert = this.alertCtrl.create({
+        title: 'Exito',
+        subTitle: 'Valoración realizada con exito.',
+        buttons: ['Cerrar']
+      });
+      alert.present();
     },error => {
       let alert = this.alertCtrl.create({
         title: 'Error',

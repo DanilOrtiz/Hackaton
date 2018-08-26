@@ -79,7 +79,13 @@ namespace WebApplication1.Controllers
             var sucesos = hackatonService.ObtenerTopDeSucesosMenorDeId(top, sucesoId);
             return Ok(sucesos);
         }
-
+        [Route("ObtenerSucesosPorUsuario/{usuarioId}")]
+        [HttpGet]
+        public IHttpActionResult ObtenerSucesosPorUsuario(int usuarioId)
+        {
+            var sucesos = hackatonService.ObtenerSucesosPorUsuario(usuarioId);
+            return Ok(sucesos);
+        }
 
 
     }

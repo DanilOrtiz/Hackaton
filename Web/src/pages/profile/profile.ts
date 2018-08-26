@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { IonicPage, NavController, NavParams, ModalController, AlertController, PopoverController, App, Content } from 'ionic-angular';
 
 import { ModalPost } from '../modal-post/modal-post';
 import { EditProfile } from '../edit-profile/edit-profile';
 import { Options } from '../options/options';
 import { TaggedProfile } from '../tagged-profile/tagged-profile';
 import { SavedProfile } from '../saved-profile/saved-profile';
+import { AppService } from '../../services/app.service';
+import { PostPopover } from '../home/post-popover';
+import { Messages } from '../messages/messages';
+import { Suceso, Categoria } from '../../models/app.models';
 
 @IonicPage()
 @Component({
@@ -13,7 +17,14 @@ import { SavedProfile } from '../saved-profile/saved-profile';
   templateUrl: 'profile.html',
 })
 export class Profile {
-
+  sucesos: Suceso[];
+  categorias: Categoria[];
+  public like_btn = {
+    color: 'black',
+    icon_name: 'heart-outline'
+  };
+  @ViewChild(Content) content: Content;
+  public tap: number = 0;
   public profile_segment:string;
 
   // You can get this data from your API. This is a dumb data for being an example.
@@ -56,7 +67,11 @@ export class Profile {
     }
   ];
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {  
+  constructor(public navCtrl: NavController, public navParams: NavParams, 
+              public modalCtrl: ModalController,private alertCtrl: AlertController, 
+              public popoverCtrl: PopoverController, public app: App,public appService: AppService) {  
+                this.ObtenerSuceso();
+                this.ObtenerCategorias();
   }
 
   // Define segment for everytime when profile page is active
@@ -99,5 +114,119 @@ export class Profile {
     { showBackdrop: true, enableBackdropDismiss: true });
     modal.present();
   }
+  ObtenerCategorias()
+  {
+    this.appService.ObtenerCategorias().subscribe(data => {
+        this.categorias = data;
+    });
+  }
+
+  ObtenerSuceso()
+  {
+    this.appService.ObtenerSucesosPorUsuario(1).subscribe(data => {
+      this.sucesos = data;
+      
+      this.sucesos.forEach(suceso => {
+        if (suceso.sucesoComentarios == null)
+        {
+          suceso.cantidadComentarios = 0;
+        } else
+        {
+          suceso.cantidadComentarios = suceso.sucesoComentarios.length;
+        }
+        
+        suceso.mostrarComentarios = false;
+       
+        if  (suceso.esAnonimo)
+        {
+          suceso.usuario.imagenUrl = "https://pbs.twimg.com/profile_images/962175011309043712/M44ZMbtf_400x400.jpg";
+          suceso.usuario.nombre = "Anonimo";
+          suceso.usuario.usuarioNombre = "Anonimo";
+          suceso.usuario.apellido = "Anonimo";
+        }
+
+        console.log(this.sucesos);
+      });
+
+    }, error => {
+
+    })
+  }
+
+  likeButton() {
+    if(this.like_btn.icon_name === 'heart-outline') {
+      this.like_btn.icon_name = 'heart';
+      this.like_btn.color = 'danger';
+      // Do some API job in here for real!
+    }
+    else {
+      this.like_btn.icon_name = 'heart-outline';
+      this.like_btn.color = 'black';
+    }
+  }
+
+  tapPhotoLike(times) { // If we click double times, it will trigger like the post
+    this.tap++;
+    if(this.tap % 2 === 0) {
+      this.likeButton();
+    }
+  }
+
+  presentPostPopover() {
+    let popover = this.popoverCtrl.create(PostPopover);
+    popover.present();
+  }
+
+  goMessages() {
+    this.app.getRootNav().push(Messages);
+  }
+
+  swipePage(event) {
+    if(event.direction === 1) { // Swipe Left
+      console.log("Swap Camera");
+    } 
+
+    if(event.direction === 2) { // Swipe Right
+      this.goMessages();
+    }
+    
+  }
+
+  scrollToTop() {
+    this.content.scrollToTop();
+  }
+
+  InsertarValoracion(valoracionId: any,sucesoId: any)
+  {
+    this.appService.InsertarValoracion(valoracionId,sucesoId,1).subscribe(data => {
+      let alert = this.alertCtrl.create({
+        title: 'Exito',
+        subTitle: 'Valoración realizada con exito.',
+        buttons: ['Cerrar']
+      });
+      alert.present();
+    },error => {
+      let alert = this.alertCtrl.create({
+        title: 'Error',
+        subTitle: 'Error al valorar Suceso',
+        buttons: ['Cerrar']
+      });
+      alert.present();
+    })
+  }
+
+  MostrarComentarios(sucesoId: any)
+  {
+    this.sucesos.forEach(suceso =>{
+      if (suceso.id == sucesoId)
+      {
+        suceso.mostrarComentarios = true;            
+        console.log(suceso);
+      }
+    });
+
+
+  }
+
 
 }

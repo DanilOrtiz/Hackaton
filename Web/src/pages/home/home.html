@@ -8,11 +8,6 @@
     
     <ion-title style="border: 1px solid #ccc" (click)="scrollToTop()"></ion-title>
 
-    <ion-buttons end right>
-      <button color="black" ion-button icon-only (click)="goMessages()">
-        <ion-icon name="paper-plane"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -46,12 +41,10 @@
         <h2 text-left style="font-weight: bold; color:black !important">{{suceso.usuario.usuarioNombre}}</h2>  
         <ion-note text-left style="font-size: 12px">
           {{suceso.fechaAgrega}}
-        </ion-note>
-      </ion-avatar>
-      <ion-avatar item-left>
-          
+        </ion-note>    
       </ion-avatar>
 
+      
       </ion-item>
         </ion-col >
         <ion-col col-2>
