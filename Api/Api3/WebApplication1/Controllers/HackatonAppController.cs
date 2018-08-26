@@ -55,5 +55,12 @@ namespace WebApplication1.Controllers
                 return BadRequest(resultado.Respuesta);
             return Ok(resultado);
         }
+
+        [HttpGet, Route("InsertarValoracion/{sucesoId}/{valoracionId}/{usuarioId}")]
+        public IHttpActionResult InsertarValoracion(int sucesoId, int valoracionId,int usuarioId)
+        {
+            return Ok(hackatonService.ValorarSuceso(sucesoId, valoracionId, usuarioId));
+        }
+
     }
 }

@@ -48,6 +48,9 @@
           {{suceso.fechaAgrega}}
         </ion-note>
       </ion-avatar>
+      <ion-avatar item-left>
+          
+      </ion-avatar>
 
       </ion-item>
         </ion-col >
@@ -116,14 +119,14 @@
       </ion-card-content>  
 
       <ion-col>
-          <button ion-button color="primary" clear small icon-start onclick="mostrarComentarios(suceso.id)">
+          <button ion-button color="primary" clear small icon-start (click)="MostrarComentarios(suceso.id)">
             <ion-icon name='text'></ion-icon>
             {{suceso.cantidadComentarios}} Commentarios
           </button>
         </ion-col>
 
         <div *ngIf="suceso.mostrarComentarios">
-        <ion-list *ngFor="let comentario of suceso.sucesoComentario">
+        <ion-list *ngFor="let comentario of suceso.sucesoComentarios">
             <ion-item >
               <ion-avatar item-start>
                 <img [src]="comentario.usuario.imagenUrl">

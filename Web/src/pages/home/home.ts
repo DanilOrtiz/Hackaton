@@ -76,12 +76,19 @@ export class Home {
           suceso.cantidadComentarios = 0;
         } else
         {
-          console.log(suceso);
           suceso.cantidadComentarios = suceso.sucesoComentarios.length;
         }
-
+        
         suceso.mostrarComentarios = false;
        
+        if  (suceso.esAnonimo)
+        {
+          suceso.usuario.imagenUrl = "https://pbs.twimg.com/profile_images/962175011309043712/M44ZMbtf_400x400.jpg";
+          suceso.usuario.nombre = "Anonimo";
+          suceso.usuario.usuarioNombre = "Anonimo";
+          suceso.usuario.apellido = "Anonimo";
+        }
+
       });
 
     }, error => {
@@ -134,8 +141,7 @@ export class Home {
 
   InsertarValoracion(valoracionId: any,sucesoId: any)
   {
-    this.appService.InsertarValoracion(valoracionId,sucesoId).subscribe(data => {
-
+    this.appService.InsertarValoracion(valoracionId,sucesoId,1).subscribe(data => {
     },error => {
       let alert = this.alertCtrl.create({
         title: 'Error',
@@ -149,12 +155,14 @@ export class Home {
   MostrarComentarios(sucesoId: any)
   {
     this.sucesos.forEach(suceso =>{
-
       if (suceso.id == sucesoId)
       {
-        suceso.mostrarComentarios = true;
+        suceso.mostrarComentarios = true;            
+        console.log(suceso);
       }
-    })
+    });
+
+
   }
 
 }

@@ -208,7 +208,7 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
         }
 
 
-        public SucesoDto ValorarSuceso(int sucesoId, int valoracion)
+        public SucesoDto ValorarSuceso(int sucesoId, int valoracion, int usuarioId)
         {
             try
             {
@@ -227,11 +227,14 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
                 var valorar = new SucesoValoracion()
                 {
                     SucesoId = sucesoId,
-                    SucesoValoracionId = valoracion
+                    SucesoValoracionId = valoracion,
+                    UsuarioId = usuarioId,
+                    UsuarioAgregaId = 0
                 };
 
                 _sucesoValoracionRepositorio.Agregar(valorar);
-                _sucesoRepositorio.UnitOfWork.SaveChanges();
+                _sucesoValoracionRepositorio.UnitOfWork.SaveChanges();
+                _sucesoValoracionRepositorio.UnitOfWork.Commit();
 
                 return new SucesoDto() { Respuesta = "Ok", RespuestaTipo = RespuestaTipo.Ok };
             }

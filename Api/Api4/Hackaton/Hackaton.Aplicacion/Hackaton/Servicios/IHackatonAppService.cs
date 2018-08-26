@@ -16,5 +16,6 @@ namespace Hackaton.Aplicacion.Hackaton.Servicios
         List<SucesoDto> ObtenerSucesos();
         SucesoDto CrearSuceso(SucesoDto suceso);
         SucesoDto AnularSuceso(SucesoDto suceso);
+        SucesoDto ValorarSuceso(int sucesoId, int valoracion,int usuarioId);
     }
 }

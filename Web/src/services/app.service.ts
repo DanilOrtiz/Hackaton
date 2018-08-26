@@ -36,9 +36,9 @@ export class AppService {
     return this.http.get(uri).map(data => data.json() as Suceso[]);    
   }
 
-  InsertarValoracion(valoracionId: number,sucesoId: number): Observable<SucesoValoracion>
+  InsertarValoracion(valoracionId: number,sucesoId: number,usuarioId: number): Observable<SucesoValoracion>
   {
-    let uri = this.Url + "InsertarValoracionDeSuceso/" + sucesoId + "/"+ valoracionId;
+    let uri = this.Url + "InsertarValoracion/" + sucesoId + "/"+ valoracionId+"/"+usuarioId;
     return this.http.get(uri).map(data => data.json() as SucesoValoracion);  
   }
 
