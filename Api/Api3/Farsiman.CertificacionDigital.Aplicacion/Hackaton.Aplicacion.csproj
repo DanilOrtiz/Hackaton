@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E6A8AB0-B1CE-459F-AF9C-01950A934E54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Hackaton.Aplicacion</RootNamespace>
+    <AssemblyName>Hackaton.Aplicacion</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper">
+      <HintPath>..\..\..\..\Users\mfuentes\Desktop\Librerias\AutoMapper.6.1.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.2.0-beta1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Hackaton\Mapeos\MapeosDto.cs" />
+    <Compile Include="Hackaton\Servicios\Login\ILoginServiceAplicacion.cs" />
+    <Compile Include="Hackaton\Servicios\Login\LoginServiceAplicacion.cs" />
+    <Compile Include="Hackaton\Dtos\CategoriaDto.cs" />
+    <Compile Include="Hackaton\Dtos\CiudadDto.cs" />
+    <Compile Include="Hackaton\Dtos\Credencial.cs" />
+    <Compile Include="Hackaton\Dtos\EmpresaCategoriaDto.cs" />
+    <Compile Include="Hackaton\Dtos\EmpresaDto.cs" />
+    <Compile Include="Hackaton\Dtos\EstadoDto.cs" />
+    <Compile Include="Hackaton\Dtos\PerfilDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoCategoriaDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoComentarioDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoMultimediaDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoMultimediaTipoDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoValoracionDto.cs" />
+    <Compile Include="Hackaton\Dtos\SucesoValoracionTipoDto.cs" />
+    <Compile Include="Hackaton\Dtos\UsuarioDto.cs" />
+    <Compile Include="Hackaton\Servicios\Cifrado\CifradoShaServicio.cs" />
+    <Compile Include="Hackaton\Servicios\Cifrado\ICifradoServicio.cs" />
+    <Compile Include="Hackaton\Servicios\HackatonAppService.cs" />
+    <Compile Include="Hackaton\Servicios\HackatonService.cs" />
+    <Compile Include="Hackaton\Servicios\IHackatonService.cs" />
+    <Compile Include="Hackaton\UsuarioLoginDto.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Aplicacion.Core\Hackaton.Aplicacion.Core.csproj">
+      <Project>{76d285fc-2068-49be-9acb-164291834b7e}</Project>
+      <Name>Hackaton.Aplicacion.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Dominio.Core\Hackaton.Dominio.Core.csproj">
+      <Project>{fa365667-2ce9-424a-9092-1e7232d786ac}</Project>
+      <Name>Hackaton.Dominio.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Farsiman.CertificacionDigital.Dominio\Hackaton.Dominio.csproj">
+      <Project>{eba3743a-e963-4e85-a60d-9d7d0ed109cf}</Project>
+      <Name>Hackaton.Dominio</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
