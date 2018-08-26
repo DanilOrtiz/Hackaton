@@ -6,11 +6,12 @@ using System.Web;
 
 namespace Hackaton.Infraestructura.Hackaton.Mapeos
 {
-    class CategoriaMap : BaseMap<Categoria>
+     class CategoriaMap : BaseMap<Categoria>
     {
         public CategoriaMap() : base("Categoria", "ID")
         {
             Property(x => x.Nombre).HasColumnType("varchar").HasMaxLength(500).IsRequired();
+            Property(x => x.ImagenUrl).HasColumnType("varchar").HasMaxLength(500).IsRequired();
         }
     }
 }
