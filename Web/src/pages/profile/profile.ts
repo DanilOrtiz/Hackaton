@@ -11,7 +11,7 @@ import { PostPopover } from '../home/post-popover';
 import { Messages } from '../messages/messages';
 import { Suceso, Categoria } from '../../models/app.models';
 
-@IonicPage()
+//@IonicPage()
 @Component({
   selector: 'page-profile',
   templateUrl: 'profile.html',

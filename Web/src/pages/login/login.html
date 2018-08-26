@@ -1,0 +1,37 @@
+
+  
+<ion-content class="Cbackground">
+	   <video  id="video" webkit-playsinline  playsinline autoplay preload="auto" loop muted>
+        <!-- <source src="ftp://u623625960.juanpaz:miguelpaz94@solucioneseconomicashn.com/hackathon/VideoFondo3.mp4" type="video/mp4"> -->
+          <source src="../assets/videos/VideoFondo3.mp4" type="video/mp4">
+        </video> 
+  </ion-content>
+
+  <ion-footer>
+      <ion-grid>
+        <ion-row>
+          <ion-col center text-center>
+              <form  (ngSubmit)="ConfirmarUsuario()" >
+                  <ion-list no-lines>
+                      <ion-item>
+                          <ion-label> </ion-label>
+                      </ion-item >  
+                      <ion-item>
+                              <ion-icon name="mail" item-start></ion-icon>
+                              <ion-label stacked>Correo:</ion-label>
+                              <ion-input name="Correo" id="Correo" type="text" placeholder="Correo" [(ngModel)]="Correo"></ion-input>
+                      </ion-item>    
+                      <ion-item>
+                          <ion-icon name="eye" item-start></ion-icon>
+                               <ion-label stacked>Contraseña:</ion-label>
+                               <ion-input name="ClaveNormal" id="ClaveNormal" type="password" placeholder="Contraseña" [(ngModel)]="ClaveNormal"></ion-input>
+                      </ion-item> 
+                       </ion-list> 
+                  <div padding >
+                      <button class="boton_Entrar" ion-button block type="submit" >Iniciar Sesión!</button>
+                  </div>
+              </form> 
+          </ion-col>   
+        </ion-row>
+      </ion-grid>
+  </ion-footer>

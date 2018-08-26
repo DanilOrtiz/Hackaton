@@ -13,5 +13,7 @@
 
   </ion-fab>
   <ion-tab [root]="tab4Root" tabIcon="heart"></ion-tab>
+  <ion-tab [root]="tab3Root" tabIcon="clipboard"></ion-tab>
   <ion-tab [root]="tab5Root" tabIcon="person"></ion-tab>
-</ion-tabs>
+  <ion-tab [root]="tab6Root" (ionSelect)="ValidarUsuario()" tabIcon="people"></ion-tab>
+  </ion-tabs>

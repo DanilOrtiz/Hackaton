@@ -48,7 +48,7 @@ import { SecureStorage } from '@ionic-native/secure-storage';
     Comments,
     TabsPage,
     LoginPage,
-    RegisterPage
+    RegisterPage,
   ],
   imports: [
     BrowserModule,
