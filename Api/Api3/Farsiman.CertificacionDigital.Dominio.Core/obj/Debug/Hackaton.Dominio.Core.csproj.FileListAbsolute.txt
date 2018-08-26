@@ -1,4 +1,0 @@
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Dominio.Core\bin\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.dll
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Dominio.Core\obj\Debug\Farsiman.CertificacionDigital.Dominio.Core.pdb

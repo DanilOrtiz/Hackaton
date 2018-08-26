@@ -25,6 +25,10 @@ import { Camera } from '@ionic-native/camera';
 import { AppService } from '../services/app.service';
 import { HttpModule } from '@angular/http';
 
+import { LoginPage } from "../pages/login/login";
+import { RegisterPage } from "../pages/register/register";
+import { SecureStorage } from '@ionic-native/secure-storage';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -42,12 +46,14 @@ import { HttpModule } from '@angular/http';
     SavedProfile,
     Options,
     Comments,
-    TabsPage
+    TabsPage,
+    LoginPage,
+    RegisterPage
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    IonicModule.forRoot(MyApp)
+        IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -67,8 +73,11 @@ import { HttpModule } from '@angular/http';
     Options,
     Comments,
     TabsPage,
+    LoginPage,
+    RegisterPage
   ],
   providers: [
+    SecureStorage,
     StatusBar,
     SplashScreen,
     Camera,

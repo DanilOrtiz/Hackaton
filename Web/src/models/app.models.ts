@@ -25,6 +25,18 @@ export class Usuario {
 
     ){}
 }
+
+export class ConfirmarUsuario {
+    constructor(
+    public Correo: string = "",
+        public Clave: string = "",
+        public usuarioId: number=0,
+        public respuestaTipo: number=0,
+        public respuesta: string = ""
+        )
+    {}
+}
+
 export class Empresa {
   constructor(
       public nombre:string="",

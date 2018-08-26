@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 import {Http} from '@angular/http';
 import { Observable } from "rxjs/Observable";
-import { Suceso, SucesoValoracion, Categoria } from "../models/app.models";
+import { Suceso, SucesoValoracion, Categoria, Usuario, ConfirmarUsuario  } from "../models/app.models";
 import 'rxjs/add/operator/map';
 import 'rxjs/Rx';
 
@@ -53,4 +53,10 @@ export class AppService {
     return this.http.get(uri).map(data => data.json() as Categoria[]);
   }
   
+  ConfirmarCredenciales(usuario: ConfirmarUsuario) : Observable<ConfirmarUsuario>
+  {
+    let uri = this.Url + "usuario/ValidarCredenciales";
+    return this.http.post(uri, usuario).map(data => data.json() as ConfirmarUsuario);
+  }
+
 }

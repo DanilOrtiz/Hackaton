@@ -1,5 +1,0 @@
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Aplicacion.Core\bin\Debug\Hackaton.Aplicacion.Core.dll
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Aplicacion.Core\bin\Debug\Hackaton.Aplicacion.Core.pdb
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Aplicacion.Core\bin\Debug\AutoMapper.xml
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Aplicacion.Core\obj\Debug\Hackaton.Aplicacion.Core.dll
-C:\Users\rober\Desktop\Hackaton\Hackaton\Api\Api3\Farsiman.CertificacionDigital.Aplicacion.Core\obj\Debug\Hackaton.Aplicacion.Core.pdb
