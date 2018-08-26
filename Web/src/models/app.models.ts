@@ -45,9 +45,30 @@ export class Empresa {
 }
 export class Suceso {
     constructor(
-        public estadoId: TipoEstados = TipoEstados.Nueva
+      public usuarioId: number=0,
+      public descripcion: string="",
+      public latitud: string="",
+      public logitud: string="",
+      public SucesoCaracteristicaId:number=0,
+      public esAnonimo:boolean=false,
+      public ciudadId:number=0,
+      public estadoId:number=0,
+      public usuario:Usuario = new Usuario,
+      public ciudad:Ciudad = new Ciudad,
+      public sucesoCategoria: SucesoCategoria[] = null,
+      public sucesoComentario: SucesoComentario[] = null,
+      public sucesoMultimedia: SucesoMultimedia[] = null,
+      public sucesoValoracion: SucesoValoracion[] = null,
+      public estado:Estado = new Estado,
     )
     {}
+}
+export class Estado {
+  constructor(
+      public descripcion: string = "",
+      public suceso:Suceso = new Suceso,
+      )
+  {}
 }
 
 export enum TipoEstados {
